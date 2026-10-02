@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://karankhetan.com/sitemap.xml
