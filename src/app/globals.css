@@ -244,6 +244,40 @@ summary:focus-visible {
   gap: 48px;
   grid-template-columns: 300px 1fr;
 }
+.home-profile {
+  display: grid;
+  align-items: center;
+  gap: 48px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.home-profile-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  object-fit: cover;
+  object-position: center 35%;
+  border: 1px solid #d3deec;
+  border-radius: 22px;
+}
+.credential-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 22px;
+  margin-top: 28px;
+}
+.credential-photo {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid #d3deec;
+  border-radius: 18px;
+  background: var(--s);
+}
+.credential-photo img {
+  object-fit: cover;
+}
 .photo {
   position: sticky;
   top: 90px;
@@ -347,8 +381,12 @@ textarea {
 }
 @media (max-width: 820px) {
   .split,
+  .home-profile,
   .row {
     grid-template-columns: 1fr;
+  }
+  .home-profile-image {
+    max-width: 480px;
   }
   .photo {
     position: static;

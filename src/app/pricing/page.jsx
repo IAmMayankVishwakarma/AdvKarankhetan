@@ -1,3 +1,26 @@
+export const metadata = {
+  title: "Pricing | Karan Khetan — Mediator",
+  description:
+    "Transparent mediation fees: consultation from ₹5,000, mediation ₹25K to ₹75K per session, full resolution from ₹1.5L.",
+  alternates: {
+    canonical: "https://karankhetan.com/pricing",
+  },
+  keywords: [
+    "mediation fees",
+    "mediation pricing",
+    "dispute resolution consultation",
+    "Karan Khetan pricing",
+    "mediator fees India",
+  ],
+  openGraph: {
+    title: "Pricing | Karan Khetan — Mediator",
+    description:
+      "Transparent mediation fees: consultation from ₹5,000, mediation ₹25K to ₹75K per session, full resolution from ₹1.5L.",
+    url: "https://karankhetan.com/pricing",
+    type: "website",
+  },
+};
+
 const Pricing = () => {
   return (
     <main>

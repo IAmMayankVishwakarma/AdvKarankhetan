@@ -1,6 +1,44 @@
+export const metadata = {
+  title: "Services | Karan Khetan — Mediator",
+  description:
+    "Mediation, arbitration, med-arb, conflict coaching, corporate ombuds and virtual dispute resolution for India–US and commercial matters.",
+  alternates: {
+    canonical: "https://karankhetan.com/services",
+  },
+  keywords: [
+    "mediation services",
+    "arbitration",
+    "med-arb",
+    "conflict coaching",
+    "corporate ombuds",
+    "India-US dispute resolution",
+    "virtual mediation",
+  ],
+  openGraph: {
+    title: "Services | Karan Khetan — Mediator",
+    description:
+      "Mediation, arbitration, med-arb, conflict coaching, corporate ombuds and virtual dispute resolution for India–US and commercial matters.",
+    url: "https://karankhetan.com/services",
+    type: "website",
+  },
+};
+
+const legalServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  name: "Karan Khetan, Mediator and Arbitrator",
+  url: "https://karankhetan.com",
+  areaServed: ["India", "United States"],
+  telephone: "+1-805-721-6293",
+};
+
 const Servies = () => {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(legalServiceSchema) }}
+      />
       <section className="hero">
         <span className="badge">Confidential. All proceedings are private.</span>
         <span className="lab" style={{ color: "var(--g)" }}></span>

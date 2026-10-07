@@ -1,6 +1,30 @@
 import Image from "next/image";
 // import styles from "./page.module.css";
 
+export const metadata = {
+  title: "Karan Khetan | Mediator & Arbitrator | India & California",
+  description:
+    "Cross-border mediator and arbitrator for India–US disputes. Mediation, arbitration and dispute resolution in Nagpur, California and online.",
+  alternates: {
+    canonical: "https://karankhetan.com/",
+  },
+  keywords: [
+    "Karan Khetan",
+    "India-US mediator",
+    "cross-border arbitrator",
+    "Nagpur mediation",
+    "California mediation",
+    "online dispute resolution",
+  ],
+  openGraph: {
+    title: "Karan Khetan | Mediator & Arbitrator | India & California",
+    description:
+      "Cross-border mediator and arbitrator for India–US disputes. Mediation, arbitration and dispute resolution in Nagpur, California and online.",
+    url: "https://karankhetan.com/",
+    type: "website",
+  },
+};
+
 export default function Home() {
   return (
     <>
@@ -24,6 +48,29 @@ export default function Home() {
           Pepperdine Straus Institute. Bombay High Court. NLSIU Bangalore.
           California court-annexed programmes.
         </div>
+        <section className="sec">
+          <div className="in home-profile">
+            <Image
+              className="home-profile-image"
+              src="/image/personal/Adv Karan ketan office.jpeg"
+              alt="Karan Khetan in his office"
+              width={900}
+              height={1350}
+              sizes="(max-width: 820px) 100vw, 45vw"
+            />
+            <div>
+              <span className="lab">Your neutral, across borders</span>
+              <h2>Experience grounded in two legal systems</h2>
+              <p>
+                Karan Khetan works with parties navigating family, civil and
+                commercial disputes across India and the United States.
+              </p>
+              <a className="btn line" href="/about">
+                Meet Karan
+              </a>
+            </div>
+          </div>
+        </section>
         <section className="sec">
           <div className="in">
             <span className="lab">Why mediation</span>

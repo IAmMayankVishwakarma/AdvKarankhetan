@@ -1,3 +1,27 @@
+export const metadata = {
+  title: "Contact | Karan Khetan — Mediator & Arbitrator",
+  description:
+    "Contact Karan Khetan for mediation and arbitration in India and California. Book a consultation or send a confidential enquiry.",
+  alternates: {
+    canonical: "https://karankhetan.com/contact",
+  },
+  keywords: [
+    "contact Karan Khetan",
+    "mediation consultation",
+    "arbitration enquiry",
+    "India mediator contact",
+    "California mediator contact",
+    "confidential dispute resolution",
+  ],
+  openGraph: {
+    title: "Contact | Karan Khetan — Mediator & Arbitrator",
+    description:
+      "Contact Karan Khetan for mediation and arbitration in India and California. Book a consultation or send a confidential enquiry.",
+    url: "https://karankhetan.com/contact",
+    type: "website",
+  },
+};
+
 const Contact = () => {
   return (
     <main>
