@@ -2,6 +2,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css"; 
 import BootstrapClient from "@/Components/BootstrapClient";
+import DisclaimerPopup from "@/Components/DisclaimerPopup";
 import Script from "next/script"; 
 import Header from "@/Components/Global Compnents/Header";
 import Footer from "@/Components/Global Compnents/Footer";
@@ -62,10 +63,13 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <Header />
-        {children}
-        <BootstrapClient />
-        <Footer />
+        <div id="site-content">
+          <Header />
+          {children}
+          <BootstrapClient />
+          <Footer />
+        </div>
+        <DisclaimerPopup />
       </body>
     </html>
   );

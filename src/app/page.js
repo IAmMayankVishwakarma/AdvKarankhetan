@@ -30,7 +30,9 @@ export default function Home() {
     <>
       <main>
         <section className="hero">
-          <span className="badge">Confidential. All proceedings are private.</span>
+          <span className="badge">
+            Confidential. All proceedings are private.
+          </span>
           <span className="lab" style={{ color: "var(--g)" }}>
             Mediator, Arbitrator, Advocate
           </span>
@@ -40,7 +42,10 @@ export default function Home() {
             disputes between India and the United States. Resolve faster, with
             control and clarity.
           </p>
-          <a className="btn" href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
+          <a
+            className="btn"
+            href="https://calendar.app.google/qPMYTsG7UpaxcGTi8"
+          >
             Schedule a Consultation
           </a>
         </section>
@@ -52,7 +57,7 @@ export default function Home() {
           <div className="in home-profile">
             <Image
               className="home-profile-image"
-              src="/image/personal/Adv Karan ketan office.jpeg"
+              src="/image/personal/WhatsApp Image 2026-09-13 at 10.53.50 PM.jpeg"
               alt="Karan Khetan in his office"
               width={900}
               height={1350}
@@ -157,7 +162,9 @@ export default function Home() {
                   "We were at a complete deadlock. We walked out with a deal
                   that worked for both of us."
                 </p>
-                <p className="note">J.M. Commercial contract dispute, California</p>
+                <p className="note">
+                  J.M. Commercial contract dispute, California
+                </p>
               </div>
               <div className="card">
                 <p>
@@ -178,7 +185,10 @@ export default function Home() {
               A focused, confidential 30 to 45 minute conversation. No
               obligation.
             </p>
-            <a className="btn" href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
+            <a
+              className="btn"
+              href="https://calendar.app.google/qPMYTsG7UpaxcGTi8"
+            >
               Schedule a Consultation
             </a>
           </div>
