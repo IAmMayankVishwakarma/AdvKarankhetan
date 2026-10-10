@@ -103,5 +103,86 @@
     "pricingIntro": "Precios transparentes y sin sorpresas, diseñados para resolver disputas con eficiencia y enfoque en resultados.",
     "contactTitle": "Póngase en contacto directamente",
     "contactIntro": "Ya sea un asunto familiar, civil o un conflicto comercial complejo, me gustaría conocer su situación."
+  },
+  "about": {
+    "roleDesignations": "Designaciones",
+    "biography": "Biografía",
+    "approach": "Enfoque",
+    "practiceAreas": "Áreas de práctica",
+    "industries": "Sectores",
+    "representativeMatters": "Casos representativos",
+    "memberships": "Membresías",
+    "languagesLocations": "Idiomas y ubicaciones",
+    "roleTags": ["Mediador", "Árbitro", "Ombudsman", "Coach de conflictos"],
+    "tagList": ["Familia y sucesiones", "India–EE. UU. transfronterizo", "Comercial y empresarial", "Disputas de consumo", "Ombuds para corporaciones", "Arrendador e inquilino", "Conflictos laborales", "Acoso civil", "Disputas médico-legales", "Pequeñas reclamaciones", "Demandas civiles de alto nivel"],
+    "industryTags": ["Hostelería", "Sanidad", "Inmobiliario", "Manufactura", "Retail y bienes de consumo", "Servicios jurídicos y profesionales"],
+    "representativeList": ["Medié una disputa sucesoria familiar entre dos ramas de una familia unida en la India. Se resolvió en dos sesiones tras años de litigio infructuoso.", "Actué como mediador anexado a un caso de acoso civil en California. Se resolvió el mismo día de la sesión.", "Medié un bloqueo contractual comercial entre dos socios de negocio en California. Se resolvió sin juicio.", "Asistí a arrendador e inquilino en un caso de desahucio en el condado de Los Ángeles. Se resolvió en una sesión.", "Facilité una disputa comercial transfronteriza entre partes indias y estadounidenses. Se resolvió mediante mediación virtual.", "Asistí a las partes en un caso de Small Claims en California. Alcanzamos un acuerdo ejecutable sin representación formal."],
+    "noPartyNames": "Los asuntos son anónimos. No aparecen nombres de las partes ni números de expediente en este sitio.",
+    "membershipsText": "Bar Council of Maharashtra and Goa. [Se añadirá el número de colegiación y el año.]",
+    "bioParagraph1": "Karan Khetan es mediador y abogado que resuelve disputas familiares, civiles y comerciales entre India y Estados Unidos. Está cualificado en la India y formado en Estados Unidos, con práctica en Nagpur y California.",
+    "bioParagraph2": "Posee un LL.M. en el Straus Institute for Dispute Resolution de la Pepperdine Caruso School of Law, un Diploma de Posgrado en Ética Médico-Legal de NLSIU Bangalore y un B.A. LL.B. (Hons.) de Jindal Global Law School.",
+    "bioParagraph3": "Colabora como mediador anexado a la justicia en California en programas de White Collar, Small Claims, Unlawful Detainer y Civil Harassment. Ha resuelto disputas familiares de larga duración que resistían el litigio convencional. Trabaja en inglés, hindi y maratí.",
+    "approachParagraph1": "Mi enfoque se basa en la preparación y en la sensibilidad cultural. Estudio la disputa antes de la primera sesión. Escucho qué necesita cada parte, algo que a menudo difiere de lo que exigen.",
+    "approachParagraph2": "La cultura influye en cómo las personas discuten, ceden y confían. La abordo directamente para que sirva como puente y no como barrera. Las partes pueden esperar franqueza, estructura y respeto por su tiempo."
+  },
+  "services": {
+    "titleLabel": "Ocho servicios",
+    "whyTitle": "Por qué la mediación",
+    "whyList": ["Más rápida que el litigio", "Confidencial y privada", "Rentable", "Usted conserva el control del resultado"],
+    "cards": [
+      {"title": "Mediación", "description": "Un proceso confidencial y estructurado en el que ayudo a las partes a alcanzar su propia solución. Aproximadamente el 70-80% de los casos mediados se resuelven.", "tags": ["Comercial", "Familiar", "Transfronterizo", "Laboral"]},
+      {"title": "Arbitraje", "description": "Una alternativa más rápida y privada a la justicia que ofrece una decisión vinculante sin los retrasos y la publicidad del litigio.", "tags": ["Comercial", "Internacional", "Contrato"]},
+      {"title": "Med-Arb", "description": "Un proceso híbrido. Las partes intentan primero la mediación. Si no se resuelve, pasa a arbitraje vinculante.", "tags": ["Híbrido", "Vinculante", "Eficiente"]},
+      {"title": "Coaching de conflictos", "description": "Coaching individual para desarrollar habilidades de comunicación y desescalada antes de que los desacuerdos se conviertan en disputas.", "tags": ["Personas", "Equipos", "Liderazgo"]},
+      {"title": "Consultoría de inteligencia cultural", "description": "Ayudamos a equipos interculturales y organizaciones internacionales a reducir fricciones y construir confianza.", "tags": ["India–EE. UU.", "Intercultural", "Equipos globales"]},
+      {"title": "Resolución virtual de disputas", "description": "Mediación y arbitraje completos online a través de geografías y zonas horarias, con especial experiencia en asuntos India–EE. UU.", "tags": ["Remoto", "India y EE. UU.", "Internacional"]},
+      {"title": "Resolución de disputas de consumo", "description": "Ayudamos a consumidores y empresas a resolver disputas de productos, servicios y contratos sin recurrir a tribunales de consumo.", "tags": ["Derechos del consumidor", "Disputas de productos", "Contratos de servicios"]},
+      {"title": "Ombuds para empresas", "description": "Un ombudsman independiente y confidencial que ofrece a empleados y partes interesadas un canal seguro para plantear inquietudes a tiempo.", "tags": ["Trabajo", "Confidencial", "Organizacional"]}
+    ]
+  },
+  "credentials": {
+    "educationTitle": "Educación",
+    "experienceTitle": "Educación y experiencia profesional",
+    "courtWorkTitle": "Trabajo judicial",
+    "membershipsTitle": "Membresías",
+    "publicationsTitle": "Publicaciones",
+    "skillsTitle": "Competencias",
+    "cards": [
+      {"title": "LL.M., Dispute Resolution", "description": "Straus Institute, Pepperdine Caruso School of Law. Malibu, California."},
+      {"title": "PG Diploma, Medical Legal Ethics", "description": "National Law School of India University. Bangalore."},
+      {"title": "B.A. LL.B. (Hons.)", "description": "Jindal Global Law School. Sonipat, Haryana. 2017 a 2022."}
+    ],
+    "courtCards": [
+      {"title": "White Collar Claims", "description": "Mediación anexada al tribunal de reclamaciones civiles de white collar."},
+      {"title": "Small Claims", "description": "Asistencia judicial en procedimientos de Small Claims."},
+      {"title": "Unlawful Detainer", "description": "Mediación en asuntos de desahucio de inquilinos y propietarios."},
+      {"title": "Civil Harassment", "description": "Diálogo estructurado en casos de órdenes de alejamiento por acoso civil."}
+    ],
+    "membershipsText": "Bar Council of Maharashtra and Goa. [Se añadirá el número, el año y cualquier panel de mediación.]",
+    "publicationsText": "[Aquí se listarán artículos sobre la ejecución de laudos arbitrales en India y EE. UU. y sobre mediación con inteligencia cultural.]",
+    "skills": ["Mediación", "Arbitraje", "Med-Arb", "Negociación", "Inteligencia cultural", "Inteligencia emocional", "Coaching de conflictos", "Derecho contractual", "Derecho de familia", "Disputas transfronterizas"]
+  },
+  "pricing": {
+    "consultationTitle": "Consulta",
+    "consultationPrice": "₹5,000",
+    "consultationDescription": "Una sesión enfocada de 45 minutos para comprender su disputa y definir el siguiente paso.",
+    "consultationBullet1": "Claridad del caso y próximos pasos",
+    "consultationBullet2": "Evaluación de idoneidad para mediación",
+    "mediationTitle": "Mediación",
+    "mediationPrice": "₹25K a ₹75K",
+    "mediationPer": "por sesión",
+    "mediationDescription": "Mediación estructurada para resolver la disputa sin litigio.",
+    "mediationBullet1": "Sesión de 2 a 4 horas",
+    "mediationBullet2": "Confidencial y neutral",
+    "mediationBullet3": "Términos de acuerdo redactados",
+    "mediationBullet4": "La mayoría de los casos se resuelven en 1 a 3 sesiones",
+    "resolutionTitle": "Resolución",
+    "resolutionPrice": "₹1.5L+",
+    "resolutionDescription": "Gestión integral de asuntos complejos, de alto riesgo o transfronterizos.",
+    "resolutionBullet1": "Múltiples sesiones",
+    "resolutionBullet2": "Apoyo estratégico y de negociación",
+    "resolutionBullet3": "Coordinación transfronteriza",
+    "strip": "Los asuntos que no se resuelven mediante mediación suelen costar de 5 a 10 veces más en honorarios y tiempo de litigio.",
+    "mostCommon": "Más habitual"
   }
 }

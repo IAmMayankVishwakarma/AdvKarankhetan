@@ -1,0 +1,315 @@
+{
+  "navigation": {
+    "home": "Acasă",
+    "about": "Despre",
+    "services": "Servicii",
+    "credentials": "Acreditări",
+    "pricing": "Prețuri",
+    "contact": "Contact",
+    "consultation": "Programare consultație",
+    "menu": "Deschide meniul",
+    "language": "Limbă"
+  },
+  "shared": {
+    "confidential": "Confidențial. Toate procedurile sunt private.",
+    "ready": "Gata să rezolvați?",
+    "conversation": "O conversație concentrată și confidențială de 30-45 de minute. Fără obligații.",
+    "downloadCv": "Descarcă CV",
+    "footerRole": "Mediator, arbitru și avocat",
+    "footerLocation": "Nagpur, India și California, SUA",
+    "footerConfidential": "Confidențial"
+  },
+  "disclaimer": {
+    "eyebrow": "Vă rugăm să citiți înainte de a continua",
+    "title": "AVERTISMENT ȘI SCOP",
+    "points": [
+      "Acest site este furnizat exclusiv în scop informativ general și nu constituie consultanță juridică.",
+      "Nimic de pe acest site nu are scopul de a publicita sau de a solicita servicii juridice. Karan Khetan nu caută clienți prin acest site, în conformitate cu Regulamentul 36 al Bar Council of India.",
+      "Accesarea, citirea sau utilizarea acestui site, precum și trimiterea unei solicitări, nu creează o relație avocat-client.",
+      "Nu acționați și nu vă bazați pe informațiile de aici ca înlocuitor pentru consultanța juridică independentă a unui avocat angajat pentru cauza dumneavoastră."
+    ],
+    "disagree": "NU SUNT DE ACORD",
+    "agree": "SUNT DE ACORD",
+    "readError": "Browserul dvs. nu a putut verifica consimțământul salvat. Acceptați pentru a continua; această preferință s-ar putea să nu fie salvată.",
+    "saveError": "Nu am putut salva preferința dvs. Activați stocarea în browser și încercați din nou."
+  },
+  "contact": {
+    "details": "Date de contact",
+    "email": "E-mail",
+    "phoneUs": "Telefon (SUA)",
+    "phoneIndia": "Telefon (India)",
+    "locations": "Locații",
+    "locationDescription": "Nagpur, India și California, SUA. Sesiuni virtuale la nivel mondial.",
+    "responseTime": "Timp de răspuns",
+    "responseDescription": "De obicei în 24-48 de ore.",
+    "firstName": "Prenume",
+    "lastName": "Nume",
+    "emailAddress": "Adresă de e-mail",
+    "matterPrompt": "Vă adresați despre",
+    "matters": [
+      "Dispută familială",
+      "Dispută comercială sau de afaceri",
+      "Dispută transfrontalieră India–SUA",
+      "Chiriaș și proprietar",
+      "Dispută de consum",
+      "Conflict profesional sau ombuds",
+      "Altul"
+    ],
+    "valuePrompt": "Valoarea aproximativă a disputei",
+    "selectRange": "Selectați intervalul",
+    "valueRanges": [
+      "Sub ₹5 lakh",
+      "₹5 până la 50 lakh",
+      "₹50 lakh până la 5 crore",
+      "Peste ₹5 crore"
+    ],
+    "urgencyPrompt": "Cât de urgent este acest caz?",
+    "selectUrgency": "Selectați urgența",
+    "urgencies": [
+      "În decurs de o săptămână",
+      "În decurs de o lună",
+      "Nu este urgent"
+    ],
+    "message": "Mesaj",
+    "confidentialMessage": "Mesajul dvs. este confidențial.",
+    "send": "Trimite mesaj"
+  },
+  "home": {
+    "role": "Mediator, arbitru și avocat",
+    "headline": "Rezolvați disputele. Eficient. Confidențial. Decisiv.",
+    "intro": "Un mediator neutru cu autoritate în două jurisdicții pentru disputele familiale, civile și comerciale între India și Statele Unite. Rezolvați mai rapid, cu control și claritate.",
+    "institutions": "Pepperdine Straus Institute. Bombay High Court. NLSIU Bangalore. Programe judiciare din California.",
+    "profileLabel": "Neutralul dvs. dincolo de frontiere",
+    "profileTitle": "Experiență ancorată în două sisteme juridice",
+    "profileText": "Karan Khetan lucrează cu părți implicate în disputele familiale, civile și comerciale dintre India și Statele Unite.",
+    "meet": "Întâlniți-l pe Karan",
+    "whyLabel": "De ce medierea",
+    "whyTitle": "O cale mai rapidă către un rezultat durabil",
+    "faster": "Mai rapid",
+    "fasterText": "Majoritatea cazurilor se soluționează în una până la trei sesiuni, mult mai repede decât în litigiul clasic.",
+    "confidentialTitle": "Confidențial",
+    "confidentialText": "Tot ceea ce se discută rămâne privat. Nu intervin instanțele decât dacă decideți dumneavoastră.",
+    "cost": "Eficient din punct de vedere al costurilor",
+    "costText": "Cazurile care nu se soluționează costă adesea de cinci până la zece ori mai mult în taxe și timp de procedură.",
+    "control": "Decideți dumneavoastră",
+    "controlText": "Părțile modelează rezultatul. Mediatorul neutru nu impune unul în mediere.",
+    "quote": "«Instanțele din această țară nu ar trebui să fie locurile în care începe rezolvarea disputelor. Ar trebui să fie locurile unde disputele se încheie, după ce au fost luate în considerare și testate metode alternative.»",
+    "quoteAttribution": "Judecătoarea Sandra Day O'Connor, Curtea Supremă a SUA",
+    "practiceLabel": "Domenii de practică",
+    "practiceTitle": "Cazurile pe care le tratez",
+    "practiceTypes": [
+      "Familie și succesiune",
+      "Dispută transfrontalieră India–SUA",
+      "Comercial și de afaceri",
+      "Dispută de consum",
+      "Ombuds pentru companii",
+      "Chiriaș și proprietar",
+      "Conflicte la locul de muncă",
+      "Hărțuire civilă",
+      "Dispută medicală și juridică"
+    ],
+    "serviceIntro": "Opt servicii de mediere, arbitraj, coaching și ombuds corporativ.",
+    "viewServices": "Vezi toate serviciile",
+    "outcomesLabel": "Rezultate",
+    "outcomesTitle": "Ce spun clienții",
+    "review1": "«Ne-am certat aproape un deceniu pentru o proprietate moștenită. Am ajuns la un acord în două sesiuni.»",
+    "review1Note": "R.S. Dispută familială privind proprietatea, India",
+    "review2": "«Am fost în impas total. Am ieșit cu un acord care funcționa pentru amândoi.»",
+    "review2Note": "J.M. Dispută contractuală comercială, California",
+    "review3": "«A gestionat cu multă finețe nuanțele culturale și juridice ale ambelor părți.»",
+    "review3Note": "A.K. Dispută comercială transfrontalieră, India și SUA"
+  },
+  "pages": {
+    "aboutTitle": "Profil neutral",
+    "aboutIntro": "Karan Khetan, mediator, arbitru, ombudsman și coach în conflicte.",
+    "servicesTitle": "Rezoluția disputelor care funcționează",
+    "servicesIntro": "Pregătire juridică riguroasă, inteligență culturală și judecată consecventă în fiecare caz.",
+    "credentialsTitle": "Acreditări",
+    "credentialsIntro": "Educație, activitate judiciară, apartenențe și publicații.",
+    "pricingTitle": "Colaborare clară și structurată",
+    "pricingIntro": "Prețuri transparente. Fără surprize. Concepute pentru rezolvări eficiente, orientate către rezultate.",
+    "contactTitle": "Contactați-ne direct",
+    "contactIntro": "Fie că este vorba de o problemă familială, civilă sau de un conflict comercial complex, aș fi bucuros să aflu situația dumneavoastră."
+  },
+  "about": {
+    "roleDesignations": "Denumiri de funcție",
+    "biography": "Biografie",
+    "approach": "Abordare",
+    "practiceAreas": "Domenii de practică",
+    "industries": "Industrii",
+    "representativeMatters": "Cazuri reprezentative",
+    "memberships": "Afilieri",
+    "languagesLocations": "Limbi și locații",
+    "roleTags": [
+      "Mediator",
+      "Arbitru",
+      "Ombudsman",
+      "Coach în conflicte"
+    ],
+    "tagList": [
+      "Familie și succesiune",
+      "Dispută transfrontalieră India–SUA",
+      "Comercial și de afaceri",
+      "Dispută de consum",
+      "Ombuds pentru companii",
+      "Chiriaș și proprietar",
+      "Conflicte la locul de muncă",
+      "Hărțuire civilă",
+      "Dispută medicală și juridică",
+      "Mici cereri",
+      "Pretenții civile de tip white collar"
+    ],
+    "industryTags": [
+      "Turism și ospitalitate",
+      "Asistență medicală",
+      "Imobiliare",
+      "Producție",
+      "Retail și bunuri de consum",
+      "Servicii juridice și profesionale"
+    ],
+    "representativeList": [
+      "A mediat o dispută de succesiune familială între două ramuri ale unei familii comune din India. A fost rezolvată în două sesiuni după ani de litigiu fără succes.",
+      "A fost mediator în cadrul unei cauze de hărțuire civilă din California. A fost soluționată în ziua sesiunii.",
+      "A mediat un blocaj contractual comercial între doi parteneri de afaceri din California. A fost rezolvat fără proces.",
+      "A asistat părțile implicate într-o dispută locatar-proprietar din județul Los Angeles. A fost soluționată în o singură sesiune.",
+      "A facilitat o dispută comercială transfrontalieră între părți din India și Statele Unite. A fost rezolvată prin mediere virtuală.",
+      "A asistat părțile într-o cauză din California Small Claims. A fost ajuns la un acord executoriu fără reprezentare formală."
+    ],
+    "noPartyNames": "Cazurile sunt anonimizate. Numele părților sau numerele de dosar nu apar pe acest site.",
+    "membershipsText": "Bar Council of Maharashtra and Goa. [Numărul de înscriere, anul și panourile de mediere vor fi adăugate.]",
+    "bioParagraph1": "Karan Khetan este mediator și avocat care rezolvă disputele familiale, civile și comerciale din India și Statele Unite. Este calificat în India și pregătit în Statele Unite, cu activitate în Nagpur și California.",
+    "bioParagraph2": "Deține un LL.M. de la Straus Institute for Dispute Resolution, Pepperdine Caruso School of Law, un certificat postuniversitar în Etica medicală și juridică de la NLSIU Bangalore și un B.A. LL.B. (Hons.) de la Jindal Global Law School.",
+    "bioParagraph3": "Voluntariile sale ca mediator în cadrul programelor judiciare din California includ White Collar, Small Claims, Unlawful Detainer și Civil Harassment. A soluționat dispute familiale de lungă durată care au rezistat litigilor convenționale. Lucrează în engleză, hindi și marathi.",
+    "approachParagraph1": "Abordarea mea este pregătită și informată din punct de vedere cultural. Studiez disputa înainte de prima sesiune. Ascult ce are nevoie fiecare parte, ceea ce este adesea diferit de ceea ce solicită.",
+    "approachParagraph2": "Cultura influențează modul în care oamenii argumentează, cedează și au încredere. O abordez direct, astfel încât să devină o punte și nu o barieră. Părțile pot aștepta onestitate, structură și respect pentru timpul lor."
+  },
+  "services": {
+    "titleLabel": "Opt servicii",
+    "whyTitle": "De ce medierea",
+    "whyList": [
+      "Mai rapid decât litigiul",
+      "Confidențial și privat",
+      "Eficient din punct de vedere al costurilor",
+      "Păstrați controlul asupra rezultatului"
+    ],
+    "cards": [
+      {
+        "title": "Mediere",
+        "description": "Un proces confidențial și structurat în care ajut părțile să ajungă la propria soluție. Aproximativ 70-80% dintre cauzele mediate se soluționează.",
+        "tags": ["Comercial", "Familial", "Transfrontalier", "Loc de muncă"]
+      },
+      {
+        "title": "Arbitraj",
+        "description": "O alternativă mai rapidă și privată la instanță, care oferă o decizie obligatorie fără întârzierile și publicitatea litigiului.",
+        "tags": ["Comercial", "Internațional", "Contract"]
+      },
+      {
+        "title": "Med-Arb",
+        "description": "Un proces hibrid. Părțile încearcă medierea mai întâi. Dacă nu se rezolvă, cauza trece la arbitraj obligatoriu.",
+        "tags": ["Hibrid", "Obligatoriu", "Eficient"]
+      },
+      {
+        "title": "Coaching în conflicte",
+        "description": "Coaching individual pentru a dezvolta abilități de comunicare și de deescaladare înainte ca neînțelegerile să devină dispute.",
+        "tags": ["Persoane", "Echipe", "Leadership"]
+      },
+      {
+        "title": "Consultanță în inteligență culturală",
+        "description": "Ajutăm echipele interculturale și organizațiile internaționale să reducă fricțiunea și să construiască încredere.",
+        "tags": ["India–SUA", "Intercultural", "Echipe globale"]
+      },
+      {
+        "title": "Mediere virtuală",
+        "description": "Mediere și arbitraj online complete în diferite geografie și fusuri orare, cu experiență în cauze India–SUA.",
+        "tags": ["La distanță", "India și SUA", "Internațional"]
+      },
+      {
+        "title": "Rezoluție a disputelor de consum",
+        "description": "Ajutăm consumatorii și companiile să rezolve litigii privind produse, servicii și contracte fără tribunalul pentru consumatori.",
+        "tags": ["Drepturile consumatorului", "Dispute privind produsele", "Contracte de servicii"]
+      },
+      {
+        "title": "Ombuds pentru companii",
+        "description": "Un ombuds independent și confidențial care oferă angajaților și părților interesate un canal sigur pentru a ridica preocupările la timp.",
+        "tags": ["Muncă", "Confidențial", "Organizațional"]
+      }
+    ]
+  },
+  "credentials": {
+    "educationTitle": "Educație",
+    "experienceTitle": "Educație și experiență profesională",
+    "courtWorkTitle": "Activitate judiciară",
+    "membershipsTitle": "Afilieri",
+    "publicationsTitle": "Publicații",
+    "skillsTitle": "Competențe",
+    "cards": [
+      {
+        "title": "LL.M., Dispute Resolution",
+        "description": "Straus Institute, Pepperdine Caruso School of Law. Malibu, California."
+      },
+      {
+        "title": "Diplomă postuniversitară, Etică medico-legală",
+        "description": "National Law School of India University. Bangalore."
+      },
+      {
+        "title": "B.A. LL.B. (Hons.)",
+        "description": "Jindal Global Law School. Sonipat, Haryana. 2017–2022."
+      }
+    ],
+    "courtCards": [
+      {
+        "title": "White Collar Claims",
+        "description": "Mediere anexată instanței pentru cauze civile de tip white collar."
+      },
+      {
+        "title": "Small Claims",
+        "description": "Asistență anexată instanței în proceduri de Small Claims."
+      },
+      {
+        "title": "Unlawful Detainer",
+        "description": "Mediere în litigii de chirie și evicțiune."
+      },
+      {
+        "title": "Civil Harassment",
+        "description": "Dialog structurat în cauze de hărțuire civilă."
+      }
+    ],
+    "membershipsText": "Bar Council of Maharashtra and Goa. [Numărul, anul și orice panouri de mediere vor fi adăugate.]",
+    "publicationsText": "[Articole despre executarea hotărârilor arbitrale în India și SUA și medierea inteligentă din punct de vedere cultural vor fi listate aici.]",
+    "skills": [
+      "Mediere",
+      "Arbitraj",
+      "Med-Arb",
+      "Negociere",
+      "Inteligență culturală",
+      "Inteligență emoțională",
+      "Coaching în conflicte",
+      "Drept contractual",
+      "Drept familial",
+      "Dispute transfrontaliere"
+    ]
+  },
+  "pricing": {
+    "consultationTitle": "Consultație",
+    "consultationPrice": "₹5,000",
+    "consultationDescription": "O sesiune concentrată de 45 de minute pentru a înțelege disputa dvs. și a defini o cale de urmat.",
+    "consultationBullet1": "Claritate privind cauza și pașii următori",
+    "consultationBullet2": "Evaluarea adecvării pentru mediere",
+    "mediationTitle": "Mediere",
+    "mediationPrice": "₹25K până la ₹75K",
+    "mediationPer": "pe sesiune",
+    "mediationDescription": "Mediere structurată pentru a rezolva disputa fără litigiu.",
+    "mediationBullet1": "Sesiune de 2-4 ore",
+    "mediationBullet2": "Confidențial și neutră",
+    "mediationBullet3": "Termeni de acord redactați",
+    "mediationBullet4": "Majoritatea cazurilor se rezolvă în 1-3 sesiuni",
+    "resolutionTitle": "Rezoluție",
+    "resolutionPrice": "₹1.5L+",
+    "resolutionDescription": "Gestionare completă a problemelor complexe, sensibile sau transfrontaliere.",
+    "resolutionBullet1": "Mai multe sesiuni",
+    "resolutionBullet2": "Suport strategic și de negociere",
+    "resolutionBullet3": "Coordonare transfrontalieră",
+    "strip": "Disputele care nu sunt rezolvate prin mediere costă de obicei de 5 până la 10 ori mai mult în taxe și timp de litigiu.",
+    "mostCommon": "Cel mai frecvent"
+  }
+}

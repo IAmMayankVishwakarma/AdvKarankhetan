@@ -103,5 +103,186 @@
     "pricingIntro": "Transparent pricing. No surprises. Designed for efficient, outcome-focused dispute resolution.",
     "contactTitle": "Get in touch directly",
     "contactIntro": "Family matter, civil issue or complex commercial conflict, I would be glad to hear about your situation."
+  },
+  "about": {
+    "roleDesignations": "Role designations",
+    "biography": "Biography",
+    "approach": "Approach",
+    "practiceAreas": "Practice areas",
+    "industries": "Industries",
+    "representativeMatters": "Representative matters",
+    "memberships": "Memberships",
+    "languagesLocations": "Languages and locations",
+    "roleTags": [
+      "Mediator",
+      "Arbitrator",
+      "Ombudsperson",
+      "Conflict Coach"
+    ],
+    "tagList": [
+      "Family and succession",
+      "Cross-border India–US",
+      "Commercial and business",
+      "Consumer disputes",
+      "Ombuds for corporates",
+      "Landlord and tenant",
+      "Workplace conflicts",
+      "Civil harassment",
+      "Medical legal disputes",
+      "Small claims",
+      "White collar civil claims"
+    ],
+    "industryTags": [
+      "Hospitality",
+      "Healthcare",
+      "Real estate",
+      "Manufacturing",
+      "Retail and consumer goods",
+      "Legal and professional services"
+    ],
+    "representativeList": [
+      "Mediated a family succession dispute between two branches of a joint family in India. Resolved in two sessions after years of failed litigation.",
+      "Served as court-annexed mediator in a civil harassment matter in California. Settled on the day of the session.",
+      "Mediated a commercial contract deadlock between two business partners in California. Resolved without trial.",
+      "Assisted landlord and tenant parties in an unlawful detainer matter in Los Angeles County. Settled in one session.",
+      "Facilitated a cross-border business dispute involving Indian and American parties. Resolved through virtual mediation.",
+      "Assisted parties in a California Small Claims matter. Reached an enforceable settlement without formal representation."
+    ],
+    "noPartyNames": "Matters are anonymised. No party names or case numbers appear on this site.",
+    "membershipsText": "Bar Council of Maharashtra and Goa. [Enrolment number and year to be added.]",
+    "bioParagraph1": "Karan Khetan is a mediator and advocate who resolves family, civil and commercial disputes across India and the United States. He is qualified in India and trained in the United States, with practice in Nagpur and California.",
+    "bioParagraph2": "He holds an LL.M. from the Straus Institute for Dispute Resolution at Pepperdine Caruso School of Law, a Post Graduate Diploma in Medical Legal Ethics from NLSIU Bangalore, and a B.A. LL.B. (Hons.) from Jindal Global Law School.",
+    "bioParagraph3": "He volunteers as a court-annexed mediator in California, in White Collar, Small Claims, Unlawful Detainer and Civil Harassment programmes. He has settled long-running family disputes that had resisted conventional litigation. He works in English, Hindi and Marathi.",
+    "approachParagraph1": "My approach is preparation-led and culturally informed. I study the dispute before the first session. I listen for what each party needs, which is often different from what they demand.",
+    "approachParagraph2": "Culture shapes how people argue, concede and trust. I address it directly, so that it becomes a bridge and not a barrier. Parties can expect candour, structure and respect for their time."
+  },
+  "services": {
+    "titleLabel": "Eight services",
+    "whyTitle": "Why mediation",
+    "whyList": [
+      "Faster than litigation",
+      "Confidential and private",
+      "Cost-efficient",
+      "You retain control of the outcome"
+    ],
+    "cards": [
+      {
+        "title": "Mediation",
+        "description": "A confidential, structured process where I help parties reach their own resolution. About 70 to 80 percent of mediated cases settle.",
+        "tags": ["Commercial", "Family", "Cross-border", "Workplace"]
+      },
+      {
+        "title": "Arbitration",
+        "description": "A faster, private alternative to court that delivers a binding decision without the delay and publicity of litigation.",
+        "tags": ["Commercial", "International", "Contract"]
+      },
+      {
+        "title": "Med-Arb",
+        "description": "A hybrid process. Parties attempt mediation first. If unresolved, the matter moves to binding arbitration.",
+        "tags": ["Hybrid", "Binding", "Efficient"]
+      },
+      {
+        "title": "Conflict Coaching",
+        "description": "One-on-one coaching to build communication and de-escalation skills before disagreements become disputes.",
+        "tags": ["Individuals", "Teams", "Leadership"]
+      },
+      {
+        "title": "Cultural Intelligence Consulting",
+        "description": "Helping cross-cultural teams and international organisations reduce friction and build trust.",
+        "tags": ["India–US", "Cross-cultural", "Global teams"]
+      },
+      {
+        "title": "Virtual Dispute Resolution",
+        "description": "Full online mediation and arbitration across geographies and time zones, with particular experience in India–US matters.",
+        "tags": ["Remote", "India and US", "International"]
+      },
+      {
+        "title": "Consumer Dispute Resolution",
+        "description": "Helping consumers and businesses resolve product, service and contract disputes without consumer court.",
+        "tags": ["Consumer rights", "Product disputes", "Service contracts"]
+      },
+      {
+        "title": "Ombuds for Corporates",
+        "description": "An independent, confidential ombudsperson who gives employees and stakeholders a safe channel to raise concerns early.",
+        "tags": ["Workplace", "Confidential", "Organisational"]
+      }
+    ]
+  },
+  "credentials": {
+    "educationTitle": "Education",
+    "experienceTitle": "Education and professional experience",
+    "courtWorkTitle": "Court work",
+    "membershipsTitle": "Memberships",
+    "publicationsTitle": "Publications",
+    "skillsTitle": "Skills",
+    "cards": [
+      {
+        "title": "LL.M., Dispute Resolution",
+        "description": "Straus Institute, Pepperdine Caruso School of Law. Malibu, California."
+      },
+      {
+        "title": "PG Diploma, Medical Legal Ethics",
+        "description": "National Law School of India University. Bangalore."
+      },
+      {
+        "title": "B.A. LL.B. (Hons.)",
+        "description": "Jindal Global Law School. Sonipat, Haryana. 2017 to 2022."
+      }
+    ],
+    "courtCards": [
+      {
+        "title": "White Collar Claims",
+        "description": "Court-annexed mediation of civil white-collar claims."
+      },
+      {
+        "title": "Small Claims",
+        "description": "Court-annexed assistance in Small Claims proceedings."
+      },
+      {
+        "title": "Unlawful Detainer",
+        "description": "Mediation in landlord and tenant eviction matters."
+      },
+      {
+        "title": "Civil Harassment",
+        "description": "Structured dialogue in civil harassment restraining order cases."
+      }
+    ],
+    "membershipsText": "Bar Council of Maharashtra and Goa. [Number, year and any mediation panels to be added.]",
+    "publicationsText": "[Articles on India–US enforcement of arbitral awards and culturally intelligent mediation to be listed here.]",
+    "skills": [
+      "Mediation",
+      "Arbitration",
+      "Med-Arb",
+      "Negotiation",
+      "Cultural intelligence",
+      "Emotional intelligence",
+      "Conflict coaching",
+      "Contract law",
+      "Family law",
+      "Cross-border disputes"
+    ]
+  },
+  "pricing": {
+    "consultationTitle": "Consultation",
+    "consultationPrice": "₹5,000",
+    "consultationDescription": "A focused 45 minute session to understand your dispute and define a path forward.",
+    "consultationBullet1": "Case clarity and next steps",
+    "consultationBullet2": "Mediation suitability assessment",
+    "mediationTitle": "Mediation",
+    "mediationPrice": "₹25K to ₹75K",
+    "mediationPer": "per session",
+    "mediationDescription": "Structured mediation to resolve your dispute without litigation.",
+    "mediationBullet1": "2 to 4 hour session",
+    "mediationBullet2": "Confidential and neutral",
+    "mediationBullet3": "Settlement terms drafted",
+    "mediationBullet4": "Most matters resolve in 1 to 3 sessions",
+    "resolutionTitle": "Resolution",
+    "resolutionPrice": "₹1.5L+",
+    "resolutionDescription": "End-to-end handling of complex, high-stakes or cross-border matters.",
+    "resolutionBullet1": "Multiple sessions",
+    "resolutionBullet2": "Strategy and negotiation support",
+    "resolutionBullet3": "Cross-border coordination",
+    "strip": "Disputes that are not resolved through mediation typically cost 5 to 10 times more in litigation fees and time.",
+    "mostCommon": "Most common"
   }
 }

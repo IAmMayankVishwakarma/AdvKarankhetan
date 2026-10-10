@@ -45,8 +45,9 @@ export default async function HomePage() {
           <h1>{t("headline")}</h1>
           <p>{t("intro")}</p>
           <a
-            className="btn"
+            className="btn" 
             href="https://calendar.app.google/qPMYTsG7UpaxcGTi8"
+             style={{ marginLeft: "12%" }}
           >
             {nav("consultation")}
           </a>

@@ -26,6 +26,7 @@ export const metadata = {
 
 const PricingPage = async () => {
   const t = await getTranslations("pages");
+  const pricing = await getTranslations("pricing");
   const shared = await getTranslations("shared");
   const nav = await getTranslations("navigation");
 
@@ -41,56 +42,42 @@ const PricingPage = async () => {
         <div className="in">
           <div className="grid">
             <div className="card">
-              <h3>Consultation</h3>
-              <div className="price">₹5,000</div>
-              <p>
-                A focused 45 minute session to understand your dispute and
-                define a path forward.
-              </p>
+              <h3>{pricing("consultationTitle")}</h3>
+              <div className="price">{pricing("consultationPrice")}</div>
+              <p>{pricing("consultationDescription")}</p>
               <ul className="l">
-                <li>Case clarity and next steps</li>
-                <li>Mediation suitability assessment</li>
+                <li>{pricing("consultationBullet1")}</li>
+                <li>{pricing("consultationBullet2")}</li>
               </ul>
-              <a
-                className="btn"
-                href="https://calendar.app.google/qPMYTsG7UpaxcGTi8"
-              >
+              <a className="btn" href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
                 {nav("consultation")}
               </a>
             </div>
             <div className="card hl">
-              <span className="mc">Most common</span>
-              <h3>Mediation</h3>
+              <span className="mc">{pricing("mostCommon")}</span>
+              <h3>{pricing("mediationTitle")}</h3>
               <div className="price">
-                ₹25K to ₹75K <small>per session</small>
+                {pricing("mediationPrice")} <small>{pricing("mediationPer")}</small>
               </div>
-              <p>
-                Structured mediation to resolve your dispute without litigation.
-              </p>
+              <p>{pricing("mediationDescription")}</p>
               <ul className="l">
-                <li>2 to 4 hour session</li>
-                <li>Confidential and neutral</li>
-                <li>Settlement terms drafted</li>
-                <li>Most matters resolve in 1 to 3 sessions</li>
+                <li>{pricing("mediationBullet1")}</li>
+                <li>{pricing("mediationBullet2")}</li>
+                <li>{pricing("mediationBullet3")}</li>
+                <li>{pricing("mediationBullet4")}</li>
               </ul>
-              <a
-                className="btn"
-                href="https://calendar.app.google/qPMYTsG7UpaxcGTi8"
-              >
+              <a className="btn" href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
                 {nav("consultation")}
               </a>
             </div>
             <div className="card">
-              <h3>Resolution</h3>
-              <div className="price">₹1.5L+</div>
-              <p>
-                End-to-end handling of complex, high-stakes or cross-border
-                matters.
-              </p>
+              <h3>{pricing("resolutionTitle")}</h3>
+              <div className="price">{pricing("resolutionPrice")}</div>
+              <p>{pricing("resolutionDescription")}</p>
               <ul className="l">
-                <li>Multiple sessions</li>
-                <li>Strategy and negotiation support</li>
-                <li>Cross-border coordination</li>
+                <li>{pricing("resolutionBullet1")}</li>
+                <li>{pricing("resolutionBullet2")}</li>
+                <li>{pricing("resolutionBullet3")}</li>
               </ul>
               <Link className="btn" href="/contact">
                 {nav("contact")}
@@ -99,16 +86,11 @@ const PricingPage = async () => {
           </div>
         </div>
       </section>
-      <div className="strip">
-        Disputes that are not resolved through mediation typically cost 5 to 10
-        times more in litigation fees and time.
-      </div>
+      <div className="strip">{pricing("strip")}</div>
       <section className="sec alt">
         <div className="in" style={{ textAlign: "center" }}>
           <h2>{shared("ready")}</h2>
-          <p style={{ marginBottom: "26px" }}>
-            {shared("conversation")}
-          </p>
+          <p style={{ marginBottom: "26px" }}>{shared("conversation")}</p>
           <a className="btn" href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
             {nav("consultation")}
           </a>

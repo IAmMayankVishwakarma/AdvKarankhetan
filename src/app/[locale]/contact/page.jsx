@@ -49,13 +49,15 @@ const ContactPage = async () => {
   return (
     <main>
       <section className="hero">
-        <span className="badge">
-          {shared("confidential")}
-        </span>
+        <span className="badge">{shared("confidential")}</span>
         <span className="lab" style={{ color: "var(--g)" }}></span>
         <h1>{t("contactTitle")}</h1>
         <p>{t("contactIntro")}</p>
-        <a className="btn" href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
+        <a
+          className="btn"
+          href="https://calendar.app.google/qPMYTsG7UpaxcGTi8"
+          style={{ marginLeft: "12%" }}
+        >
           {nav("consultation")}
         </a>
       </section>
@@ -166,5 +168,6 @@ const ContactPage = async () => {
         </div>
       </section>
     </main>
-  );}
+  );
+};
 export default ContactPage;

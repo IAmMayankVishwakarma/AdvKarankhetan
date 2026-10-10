@@ -7,9 +7,9 @@ import { Link, usePathname, useRouter } from "@/i18n/navigation";
 const languages = [
   { code: "en", label: "English" },
   { code: "hi", label: "हिन्दी" },
-  { code: "hi-Latn", label: "Roman Hindi" },
-  { code: "ja", label: "日本語" },
+  { code: "ro", label: "Română" },
   { code: "es", label: "Español" },
+  { code: "ja", label: "日本語" },
 ];
 
 const navigation = [

@@ -103,5 +103,86 @@
     "pricingIntro": "明瞭な料金体系。予想外の費用はありません。効率的で成果を重視した紛争解決を提供します。",
     "contactTitle": "直接お問い合わせください",
     "contactIntro": "家族問題、民事問題、複雑な商事紛争について、お気軽にご相談ください。"
+  },
+  "about": {
+    "roleDesignations": "役職",
+    "biography": "略歴",
+    "approach": "アプローチ",
+    "practiceAreas": "実務分野",
+    "industries": "業界",
+    "representativeMatters": "代表案件",
+    "memberships": "所属団体",
+    "languagesLocations": "対応言語と地域",
+    "roleTags": ["調停人", "仲裁人", "オンブズパーソン", "紛争コーチ"],
+    "tagList": ["家族・相続", "インド・米国間の紛争", "商事・ビジネス", "消費者紛争", "企業向けオンブズ", "賃貸借", "職場の紛争", "民事ハラスメント", "医療・法律関連紛争", "少額訴訟", "白 Collar civil claims"],
+    "industryTags": ["ホスピタリティ", "医療", "不動産", "製造業", "小売・消費財", "法務・専門サービス"],
+    "representativeList": ["インドでの共同家族の相続争いを2回のセッションで解決した。数年にわたる訴訟の末に成立した。", "カリフォルニアの民事ハラスメント案件で裁判所付属調停人として対応し、当日合意に至った。", "カリフォルニアでの商事契約の停滞を仲裁前の調停で解決し、審理なしで合意に至った。", "ロサンゼルス郡の不法使用差し止め案件で賃貸人と借家人の両当事者を支援し、1回のセッションで解決した。", "インドと米国の当事者が関わる越境ビジネス紛争をオンライン調停で解決した。", "カリフォルニアの少額訴訟案件で当事者を支援し、正式な代理人なしに執行可能な和解を実現した。"],
+    "noPartyNames": "案件は匿名化されており、当事者名や事件番号は本サイトには掲載されません。",
+    "membershipsText": "Bar Council of Maharashtra and Goa. [登録番号、年、調停委員会の情報は追加予定です。]",
+    "bioParagraph1": "Karan Khetanは、インドと米国にまたがる家族、民事、商事紛争を解決する調停人兼弁護士です。インドで資格を持ち、米国で訓練を受けており、ナーグプルとカリフォルニアで活動しています。",
+    "bioParagraph2": "ペパーダイン大学ロースクールのStraus Institute for Dispute ResolutionでLL.M.を取得し、NLSIUバンガロールでMedical Legal Ethicsの大学院ディプロマを修了し、Jindal Global Law SchoolでB.A. LL.B.（Hons.）を修了しました。",
+    "bioParagraph3": "カリフォルニアでは、White Collar、Small Claims、Unlawful Detainer、Civil Harassmentの裁判所付属調停者として活動しています。従来の訴訟では解決困難だった長期の家族間紛争も整理してきました。英語、ヒンディー語、マラーティー語に対応しています。",
+    "approachParagraph1": "私のアプローチは、準備を重視し、文化的背景を踏まえることです。初回のセッション前に事案を確認し、各当事者が何を必要としているかを丁寧に聞きます。これはしばしば要求事項と異なります。",
+    "approachParagraph2": "文化は、当事者がどのように主張し、妥協し、信頼するかに影響します。私はその点を正面から扱い、障壁ではなく橋渡しとなるようにします。当事者には、率直さ、構造性、時間への敬意を期待していただけます。"
+  },
+  "services": {
+    "titleLabel": "8つのサービス",
+    "whyTitle": "調停を選ぶ理由",
+    "whyList": ["訴訟より速い", "秘密厳守", "費用対効果が高い", "結果に対する主導権を保持"],
+    "cards": [
+      {"title": "調停", "description": "秘密厳守で構造化されたプロセスを通じて、当事者自身が解決策を導き出します。調停案件の約70〜80%が成立します。", "tags": ["商事", "家族", "越境", "職場"]},
+      {"title": "仲裁", "description": "裁判所に代わるより速く、より私的な選択肢で、訴訟の遅延や露出を避けながら拘束力ある判断を下します。", "tags": ["商事", "国際", "契約"]},
+      {"title": "Med-Arb", "description": "ハイブリッド型プロセスです。まず調停を試み、合意に至らなければ拘束力ある仲裁に移行します。", "tags": ["ハイブリッド", "拘束力あり", "効率的"]},
+      {"title": "紛争コーチング", "description": "一対一でコミュニケーションや平和的解決のスキルを鍛え、問題が紛争化する前に対処します。", "tags": ["個人", "チーム", "リーダーシップ"]},
+      {"title": "文化的知性のコンサルティング", "description": "異文化チームや国際組織が摩擦を減らし信頼を築けるよう支援します。", "tags": ["インド・米国", "異文化", "グローバルチーム"]},
+      {"title": "オンライン紛争解決", "description": "地理や時間差を超えて、インド・米国案件に特に強みのあるオンライン調停・仲裁を提供します。", "tags": ["リモート", "インドと米国", "国際"]},
+      {"title": "消費者紛争解決", "description": "消費者や事業者が商品・サービス・契約の紛争を消費者裁判に頼らず解決できるよう支援します。", "tags": ["消費者保護", "商品紛争", "サービス契約"]},
+      {"title": "企業向けオンブズ", "description": "独立した秘密厳守のオンブズパーソンとして、従業員や関係者が早期に懸念を伝えられる安全な窓口を提供します。", "tags": ["職場", "秘密厳守", "組織内"]}
+    ]
+  },
+  "credentials": {
+    "educationTitle": "学歴",
+    "experienceTitle": "学歴と職務経験",
+    "courtWorkTitle": "裁判所関連業務",
+    "membershipsTitle": "所属団体",
+    "publicationsTitle": "出版物",
+    "skillsTitle": "スキル",
+    "cards": [
+      {"title": "LL.M., Dispute Resolution", "description": "Straus Institute, Pepperdine Caruso School of Law. Malibu, California."},
+      {"title": "PG Diploma, Medical Legal Ethics", "description": "National Law School of India University. Bangalore."},
+      {"title": "B.A. LL.B. (Hons.)", "description": "Jindal Global Law School. Sonipat, Haryana. 2017〜2022."}
+    ],
+    "courtCards": [
+      {"title": "White Collar Claims", "description": "民事のホワイトカラー請求に関する裁判所付属調停。"},
+      {"title": "Small Claims", "description": "Small Claims手続きにおける裁判所付属支援。"},
+      {"title": "Unlawful Detainer", "description": "賃貸借と明渡し事案における調停。"},
+      {"title": "Civil Harassment", "description": "民事ハラスメントの接近禁止命令案件における構造的対話。"}
+    ],
+    "membershipsText": "Bar Council of Maharashtra and Goa. [登録番号、年、調停委員会情報は追加予定です。]",
+    "publicationsText": "[インド・米国における仲裁判決の執行と文化的に配慮した調停に関する記事をここに掲載予定です。]",
+    "skills": ["調停", "仲裁", "Med-Arb", "交渉", "文化的知性", "感情知性", "紛争コーチング", "契約法", "家族法", "越境紛争"]
+  },
+  "pricing": {
+    "consultationTitle": "相談",
+    "consultationPrice": "₹5,000",
+    "consultationDescription": "紛争を理解し、今後の進め方を整理する45分の集中相談です。",
+    "consultationBullet1": "案件の整理と次のステップ",
+    "consultationBullet2": "調停適性の評価",
+    "mediationTitle": "調停",
+    "mediationPrice": "₹25K〜₹75K",
+    "mediationPer": "1回あたり",
+    "mediationDescription": "訴訟を避けて紛争を解決するための構造化された調停です。",
+    "mediationBullet1": "2〜4時間のセッション",
+    "mediationBullet2": "秘密厳守で中立的",
+    "mediationBullet3": "和解条項の作成",
+    "mediationBullet4": "大半の案件は1〜3回のセッションで解決",
+    "resolutionTitle": "解決支援",
+    "resolutionPrice": "₹1.5L+",
+    "resolutionDescription": "複雑で高リスク、または越境案件を一貫してサポートします。",
+    "resolutionBullet1": "複数回のセッション",
+    "resolutionBullet2": "戦略と交渉支援",
+    "resolutionBullet3": "越境コーディネーション",
+    "strip": "調停で解決しない案件では、訴訟費用と時間が通常5〜10倍かかります。",
+    "mostCommon": "最も一般的"
   }
 }
