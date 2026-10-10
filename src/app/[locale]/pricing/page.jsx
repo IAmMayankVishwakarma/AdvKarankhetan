@@ -1,3 +1,6 @@
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+
 export const metadata = {
   title: "Pricing | Karan Khetan — Mediator",
   description:
@@ -21,17 +24,18 @@ export const metadata = {
   },
 };
 
-const Pricing = () => {
+const PricingPage = async () => {
+  const t = await getTranslations("pages");
+  const shared = await getTranslations("shared");
+  const nav = await getTranslations("navigation");
+
   return (
     <main>
       <section className="hero">
-        <span className="badge">Confidential. All proceedings are private.</span>
+        <span className="badge">{shared("confidential")}</span>
         <span className="lab" style={{ color: "var(--g)" }}></span>
-        <h1>Clear, structured engagement</h1>
-        <p>
-          Transparent pricing. No surprises. Designed for efficient,
-          outcome-focused dispute resolution.
-        </p>
+        <h1>{t("pricingTitle")}</h1>
+        <p>{t("pricingIntro")}</p>
       </section>
       <section className="sec">
         <div className="in">
@@ -51,7 +55,7 @@ const Pricing = () => {
                 className="btn"
                 href="https://calendar.app.google/qPMYTsG7UpaxcGTi8"
               >
-                Schedule a Consultation
+                {nav("consultation")}
               </a>
             </div>
             <div className="card hl">
@@ -73,7 +77,7 @@ const Pricing = () => {
                 className="btn"
                 href="https://calendar.app.google/qPMYTsG7UpaxcGTi8"
               >
-                Schedule a Consultation
+                {nav("consultation")}
               </a>
             </div>
             <div className="card">
@@ -88,9 +92,9 @@ const Pricing = () => {
                 <li>Strategy and negotiation support</li>
                 <li>Cross-border coordination</li>
               </ul>
-              <a className="btn" href="contact.html">
-                Get in touch
-              </a>
+              <Link className="btn" href="/contact">
+                {nav("contact")}
+              </Link>
             </div>
           </div>
         </div>
@@ -101,12 +105,12 @@ const Pricing = () => {
       </div>
       <section className="sec alt">
         <div className="in" style={{ textAlign: "center" }}>
-          <h2>Ready to resolve?</h2>
+          <h2>{shared("ready")}</h2>
           <p style={{ marginBottom: "26px" }}>
-            A focused, confidential 30 to 45 minute conversation. No obligation.
+            {shared("conversation")}
           </p>
           <a className="btn" href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
-            Schedule a Consultation
+            {nav("consultation")}
           </a>
         </div>
       </section>
@@ -114,4 +118,4 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
+export default PricingPage;

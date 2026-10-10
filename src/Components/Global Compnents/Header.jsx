@@ -1,63 +1,80 @@
-import Link from 'next/link';
+"use client";
 
-const Header = () => {
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
+
+const languages = [
+  { code: "en", label: "English" },
+  { code: "hi", label: "हिन्दी" },
+  { code: "hi-Latn", label: "Roman Hindi" },
+  { code: "ja", label: "日本語" },
+  { code: "es", label: "Español" },
+];
+
+const navigation = [
+  { href: "/", key: "home" },
+  { href: "/about", key: "about" },
+  { href: "/services", key: "services" },
+  { href: "/credentials", key: "credentials" },
+  { href: "/pricing", key: "pricing" },
+  { href: "/contact", key: "contact" },
+];
+
+export default function Header() {
+  const t = useTranslations("navigation");
+  const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  function handleLanguageChange(event) {
+    router.replace(pathname, { locale: event.target.value });
+  }
+
   return (
-    <>
-      <header>
-        <nav aria-label="Main">
-          {/* Next.js Link का उपयोग करें और class को className में बदलें */}
-          <Link className="logo" href="/">
-            Karan <i>Khetan</i>
-          </Link>
-          
-          {/* Input टैग को अंत में /> से बंद किया गया है */}
-          <input type="checkbox" id="mt" />
-          
-          {/* HTML style स्ट्रिंग को React ऑब्जेक्ट फॉर्मेट में बदला गया है */}
-          <label
-            className="burger"
-            htmlFor="mt" /* 'for' की जगह 'htmlFor' का उपयोग होता है */
-            aria-label="Menu"
-            style={{
-              margin: 0,
-              fontSize: '26px',
-              letterSpacing: 0,
-              textTransform: 'none',
-            }}
-          >
-            ☰
-          </label>
-          
-          <ul>
-            <li>
-              <Link href="/" className="nav-link on" aria-current="page">
-                Home
+    <header>
+      <nav aria-label="Main">
+        <Link className="logo" href="/">
+          Karan <i>Khetan</i>
+        </Link>
+        <input type="checkbox" id="mt" />
+        <label className="burger" htmlFor="mt" aria-label={t("menu")}>
+          ☰
+        </label>
+        <ul>
+          {navigation.map(({ href, key }) => (
+            <li key={key}>
+              <Link
+                href={href}
+                className={pathname === href ? "on" : undefined}
+                aria-current={pathname === href ? "page" : undefined}
+              >
+                {t(key)}
               </Link>
             </li>
-            <li>
-              <Link href="/about">About</Link>
-            </li>
-            <li>
-              <Link href="/services">Services</Link>
-            </li>
-            <li>
-              <Link href="/credentials">Credentials</Link>
-            </li>
-            <li>
-              <Link href="/pricing">Pricing</Link>
-            </li>
-            <li>
-              <Link href="/contact">Contact</Link>
-            </li>
-          </ul>
-          
-          <a className="btn" href="https://calendar.app.google/qPMYTsG7UpaxcGTi8" target="_blank" rel="noopener noreferrer">
-            Schedule a Consultation
-          </a>
-        </nav>
-      </header>
-    </>
+          ))}
+        </ul>
+        <select
+          aria-label={t("language")}
+          className="language-switcher"
+          onChange={handleLanguageChange}
+          value={locale}
+        >
+          {languages.map(({ code, label }) => (
+            <option key={code} value={code}>
+              {label}
+            </option>
+          ))}
+        </select>
+        <a
+          className="btn"
+          href="https://calendar.app.google/qPMYTsG7UpaxcGTi8"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {t("consultation")}
+        </a>
+      </nav>
+    </header>
   );
-};
-
-export default Header;
+}

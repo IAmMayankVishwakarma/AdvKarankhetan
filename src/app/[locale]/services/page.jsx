@@ -32,7 +32,11 @@ const legalServiceSchema = {
   telephone: "+1-805-721-6293",
 };
 
-const Servies = () => {
+const Services = async () => {
+  const t = await getTranslations("pages");
+  const shared = await getTranslations("shared");
+  const nav = await getTranslations("navigation");
+
   return (
     <main>
       <script
@@ -40,13 +44,10 @@ const Servies = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(legalServiceSchema) }}
       />
       <section className="hero">
-        <span className="badge">Confidential. All proceedings are private.</span>
+        <span className="badge">{shared("confidential")}</span>
         <span className="lab" style={{ color: "var(--g)" }}></span>
-        <h1>Dispute resolution that works</h1>
-        <p>
-          Rigorous legal training, cultural intelligence and steady judgement in
-          every matter.
-        </p>
+        <h1>{t("servicesTitle")}</h1>
+        <p>{t("servicesIntro")}</p>
       </section>
       <section className="sec">
         <div className="in">
@@ -166,16 +167,17 @@ const Servies = () => {
       </section>
       <section className="sec alt">
         <div className="in" style={{ textAlign: "center" }}>
-          <h2>Ready to resolve?</h2>
+          <h2>{shared("ready")}</h2>
           <p style={{ marginBottom: "26px" }}>
-            A focused, confidential 30 to 45 minute conversation. No obligation.
+            {shared("conversation")}
           </p>
           <a className="btn" href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
-            Schedule a Consultation
+            {nav("consultation")}
           </a>
         </div>
       </section>
     </main>
   );};
 
-export default Servies;
+export default Services;
+import { getTranslations } from "next-intl/server";

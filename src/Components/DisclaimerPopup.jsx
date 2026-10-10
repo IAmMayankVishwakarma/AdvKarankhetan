@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 
 const CONSENT_KEY = "bciDisclaimerAccepted";
 
 export default function DisclaimerPopup() {
+  const t = useTranslations("disclaimer");
   const [isOpen, setIsOpen] = useState(true);
   const [storageError, setStorageError] = useState("");
   const dialogRef = useRef(null);
@@ -21,14 +23,12 @@ export default function DisclaimerPopup() {
           "Unable to read disclaimer consent from localStorage.",
           error,
         );
-        setStorageError(
-          "Your browser could not check saved consent. Please accept to continue; this preference may not be saved.",
-        );
+        setStorageError(t("readError"));
       }
     }, 0);
 
     return () => window.clearTimeout(checkConsent);
-  }, []);
+  }, [t]);
 
   useEffect(() => {
     if (!isOpen) {
@@ -91,9 +91,7 @@ export default function DisclaimerPopup() {
       setIsOpen(false);
     } catch (error) {
       console.error("Unable to save disclaimer consent to localStorage.", error);
-      setStorageError(
-        "We could not save your preference. Please enable browser storage and try again.",
-      );
+      setStorageError(t("saveError"));
     }
   }
 
@@ -110,26 +108,12 @@ export default function DisclaimerPopup() {
         ref={dialogRef}
         role="dialog"
       >
-        <span className="lab">Please read before continuing</span>
-        <h2 id="disclaimer-title">DISCLAIMER &amp; INTENTION</h2>
+        <span className="lab">{t("eyebrow")}</span>
+        <h2 id="disclaimer-title">{t("title")}</h2>
         <ul className="disclaimer-points">
-          <li>
-            This website is provided solely for general informational purposes
-            and does not constitute legal advice.
-          </li>
-          <li>
-            Nothing on this website is intended to advertise or solicit legal
-            work. Karan Khetan does not seek work through this website, in
-            accordance with Rule 36 of the Bar Council of India Rules.
-          </li>
-          <li>
-            Accessing, reading or using this website, or sending an enquiry,
-            does not create a lawyer-client relationship.
-          </li>
-          <li>
-            Do not act or rely on information here as a substitute for
-            independent legal advice from a lawyer engaged for your matter.
-          </li>
+          {t.raw("points").map((point) => (
+            <li key={point}>{point}</li>
+          ))}
         </ul>
         {storageError && (
           <p className="disclaimer-error" role="alert">
@@ -142,7 +126,7 @@ export default function DisclaimerPopup() {
             onClick={() => window.location.assign("https://www.google.com")}
             type="button"
           >
-            DISAGREE
+            {t("disagree")}
           </button>
           <button
             className="btn"
@@ -150,7 +134,7 @@ export default function DisclaimerPopup() {
             ref={agreeButtonRef}
             type="button"
           >
-            I AGREE
+            {t("agree")}
           </button>
         </div>
       </section>

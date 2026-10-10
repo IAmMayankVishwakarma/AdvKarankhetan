@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 export const metadata = {
   title: "Neutral Profile | Karan Khetan — Mediator & Arbitrator",
   description:
@@ -27,7 +28,10 @@ export const metadata = {
   },
 };
 
-export default function About() {
+export default async function AboutPage() {
+  const t = await getTranslations("pages");
+  const shared = await getTranslations("shared");
+
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -48,13 +52,11 @@ export default function About() {
       <main>
         <section className="hero">
           <span className="badge">
-            Confidential. All proceedings are private.
+            {shared("confidential")}
           </span>
           <span className="lab" style={{ color: "var(--g)" }}></span>
-          <h1>Neutral Profile</h1>
-          <p>
-            Karan Khetan, Mediator, Arbitrator, Ombudsperson and Conflict Coach.
-          </p>
+          <h1>{t("aboutTitle")}</h1>
+          <p>{t("aboutIntro")}</p>
         </section>
         <section className="sec">
           <div className="in split">
@@ -179,7 +181,7 @@ export default function About() {
                   target="_blank"
                   rel="noopener"
                 >
-                  Download CV
+                  {shared("downloadCv")}
                 </a>
               </p>
             </div>

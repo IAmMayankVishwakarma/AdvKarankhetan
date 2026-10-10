@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 
 export const metadata = {
   title: "Credentials | Karan Khetan — Mediator",
@@ -23,7 +24,11 @@ export const metadata = {
   },
 };
 
-const Credentials = () => {
+const CredentialsPage = async () => {
+  const t = await getTranslations("pages");
+  const shared = await getTranslations("shared");
+  const nav = await getTranslations("navigation");
+
   const credentialImages = [
     {
       src: "/image/education/WhatsApp Image 2026-09-26 at 12.10.12 PM.jpeg",
@@ -74,10 +79,10 @@ const Credentials = () => {
   return (
     <main>
       <section className="hero">
-        <span className="badge">Confidential. All proceedings are private.</span>
+        <span className="badge">{shared("confidential")}</span>
         <span className="lab" style={{ color: "var(--g)" }}></span>
-        <h1>Credentials</h1>
-        <p>Education, court work, memberships and publications.</p>
+        <h1>{t("credentialsTitle")}</h1>
+        <p>{t("credentialsIntro")}</p>
       </section>
       <section className="sec">
         <div className="in">
@@ -167,19 +172,19 @@ const Credentials = () => {
               target="_blank"
               rel="noopener"
             >
-              Download CV
+              {shared("downloadCv")}
             </a>
           </p>
         </div>
       </section>
       <section className="sec alt">
         <div className="in" style={{ textAlign: "center" }}>
-          <h2>Ready to resolve?</h2>
+          <h2>{shared("ready")}</h2>
           <p style={{ marginBottom: "26px" }}>
-            A focused, confidential 30 to 45 minute conversation. No obligation.
+            {shared("conversation")}
           </p>
           <a className="btn" href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
-            Schedule a Consultation
+            {nav("consultation")}
           </a>
         </div>
       </section>
@@ -187,4 +192,4 @@ const Credentials = () => {
   );
 };
 
-export default Credentials;
+export default CredentialsPage;
