@@ -90,7 +90,13 @@
     "review2": "\"We were at a complete deadlock. We walked out with a deal that worked for both of us.\"",
     "review2Note": "J.M. Commercial contract dispute, California",
     "review3": "\"He navigated the cultural and legal nuances on both sides with real fluency.\"",
-    "review3Note": "A.K. Cross-border business dispute, India and US"
+    "review3Note": "A.K. Cross-border business dispute, India and US",
+    "recommendations": {
+      "label": "Professional recommendations",
+      "title": "Recommended by",
+      "pendingReview": "Recommendation text pending client-provided, source-verified content. No endorsement is published here.",
+      "profileLink": "View {name}'s professional profile (opens in a new tab)"
+    }
   },
   "pages": {
     "aboutTitle": "Neutral Profile",

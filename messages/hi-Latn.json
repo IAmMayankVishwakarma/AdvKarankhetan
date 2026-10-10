@@ -90,7 +90,13 @@
     "review2": "\"Hum poori tarah deadlock mein the. Hum dono ke liye kaam karne wale deal ke saath nikle.\"",
     "review2Note": "J.M. California ka commercial contract dispute",
     "review3": "\"Unhone dono taraf ki cultural aur legal nuances ko bahut fluently samjha.\"",
-    "review3Note": "A.K. India-US cross-border business dispute"
+    "review3Note": "A.K. India-US cross-border business dispute",
+    "recommendations": {
+      "label": "Professional recommendations",
+      "title": "Recommended by",
+      "pendingReview": "Recommendation text client ke source-verified content dene ka intezaar kar raha hai. Yahan koi endorsement publish nahi kiya gaya hai.",
+      "profileLink": "{name} ki professional profile dekhein (naye tab mein khulegi)"
+    }
   },
   "pages": {
     "aboutTitle": "Neutral Profile",

@@ -90,7 +90,13 @@
     "review2": "«Estábamos en un punto muerto. Salimos con un acuerdo que nos funcionaba a ambos».",
     "review2Note": "J.M. Disputa de contrato comercial, California",
     "review3": "«Comprendió con gran soltura los matices culturales y jurídicos de ambas partes».",
-    "review3Note": "A.K. Disputa empresarial transfronteriza, India y EE. UU."
+    "review3Note": "A.K. Disputa empresarial transfronteriza, India y EE. UU.",
+    "recommendations": {
+      "label": "Recomendaciones profesionales",
+      "title": "Recomendado por",
+      "pendingReview": "El texto de la recomendación está pendiente de contenido verificado por fuentes y proporcionado por el cliente. Aquí no se publica ningún respaldo.",
+      "profileLink": "Ver el perfil profesional de {name} (se abre en una pestaña nueva)"
+    }
   },
   "pages": {
     "aboutTitle": "Perfil profesional neutral",

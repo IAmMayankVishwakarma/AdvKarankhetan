@@ -220,6 +220,44 @@ summary:focus-visible {
   font-size: 15px;
   color: #3b4d66;
 }
+.recommendation-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.recommendation-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+.recommendation-pending,
+.recommendation-review {
+  margin-bottom: 28px;
+  font-size: 15px;
+  color: #3b4d66;
+}
+.recommendation-pending {
+  font-style: italic;
+}
+.recommendation-review {
+  line-height: 1.7;
+}
+.recommendation-profile {
+  margin-top: auto;
+}
+.recommendation-designation {
+  margin-bottom: 8px;
+  color: #5b6e88;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.recommendation-link {
+  color: var(--m);
+  font-weight: 500;
+  text-decoration: none;
+}
+.recommendation-link:hover {
+  color: var(--b);
+  text-decoration: underline;
+}
 .tag {
   display: inline-block;
   background: var(--s);

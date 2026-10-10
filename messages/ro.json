@@ -117,7 +117,13 @@
     "review2": "«Am fost în impas total. Am ieșit cu un acord care funcționa pentru amândoi.»",
     "review2Note": "J.M. Dispută contractuală comercială, California",
     "review3": "«A gestionat cu multă finețe nuanțele culturale și juridice ale ambelor părți.»",
-    "review3Note": "A.K. Dispută comercială transfrontalieră, India și SUA"
+    "review3Note": "A.K. Dispută comercială transfrontalieră, India și SUA",
+    "recommendations": {
+      "label": "Recomandări profesionale",
+      "title": "Recomandat de",
+      "pendingReview": "Textul recomandării așteaptă conținut verificat din surse, furnizat de client. Aici nu este publicată nicio recomandare.",
+      "profileLink": "Vezi profilul profesional al lui {name} (se deschide într-o filă nouă)"
+    }
   },
   "pages": {
     "aboutTitle": "Profil neutral",

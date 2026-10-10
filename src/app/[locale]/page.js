@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import RecommendedBy from "@/Components/Pages Components/Home Page/RecommendedBy";
 // import styles from "./page.module.css";
 
 export const metadata = {
@@ -144,6 +145,7 @@ export default async function HomePage() {
             </div>
           </div>
         </section>
+        <RecommendedBy />
         <section className="sec alt">
           <div className="in" style={{ textAlign: "center" }}>
             <h2>{shared("ready")}</h2>

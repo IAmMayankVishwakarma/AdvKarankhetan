@@ -7,3 +7,4 @@
 - 2026-10-08: Added a responsive, keyboard-accessible BCI Rule 36 informational disclaimer modal with a blocking overlay, four disclosures, localStorage consent, and a disagree redirect.
 - 2026-10-10: Fixed the locale configuration to support the required five-language routing set (English, Hindi, Romanian, Spanish, and Japanese), updated the language selector to the correct options, and added Romanian translations for the site.
 - 2026-10-10: Verified the live Google Calendar Primary Consultation booking page is set to 60-minute appointments. The website links to this hosted appointment schedule and does not control its duration; change the schedule duration to 45 minutes in the Google Calendar appointment schedule settings.
+- 2026-10-10: Added a multilingual, text-only “Recommended by” section to the home page with five supplied professional profiles, verified institutional roles where available, and clearly labeled placeholders instead of unprovided testimonials.
