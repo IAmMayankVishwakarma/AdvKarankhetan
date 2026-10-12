@@ -1,11 +1,14 @@
 // src/app/layout.js
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./globals.css"; 
+import "../globals.css";
 import BootstrapClient from "@/Components/BootstrapClient";
 import DisclaimerPopup from "@/Components/DisclaimerPopup";
-import Script from "next/script"; 
 import Header from "@/Components/Global Compnents/Header";
 import Footer from "@/Components/Global Compnents/Footer";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { notFound } from "next/navigation";
+import { setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 
 
 
@@ -30,11 +33,21 @@ export const metadata = {
   },
 };
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
+export default async function LocaleLayout({ children, params }) {
+  const { locale } = await params;
 
-export default function RootLayout({ children }) {
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -63,13 +76,15 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <div id="site-content">
-          <Header />
-          {children}
-          <BootstrapClient />
-          <Footer />
-        </div>
-        <DisclaimerPopup />
+        <NextIntlClientProvider>
+          <div id="site-content">
+            <Header />
+            {children}
+            <BootstrapClient />
+            <Footer />
+          </div>
+          <DisclaimerPopup />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

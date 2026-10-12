@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 
 export const metadata = {
   title: "Credentials | Karan Khetan — Mediator",
@@ -23,7 +24,12 @@ export const metadata = {
   },
 };
 
-const Credentials = () => {
+const CredentialsPage = async () => {
+  const t = await getTranslations("pages");
+  const credentials = await getTranslations("credentials");
+  const shared = await getTranslations("shared");
+  const nav = await getTranslations("navigation");
+
   const credentialImages = [
     {
       src: "/image/education/WhatsApp Image 2026-09-26 at 12.10.12 PM.jpeg",
@@ -74,32 +80,23 @@ const Credentials = () => {
   return (
     <main>
       <section className="hero">
-        <span className="badge">Confidential. All proceedings are private.</span>
+        <span className="badge">{shared("confidential")}</span>
         <span className="lab" style={{ color: "var(--g)" }}></span>
-        <h1>Credentials</h1>
-        <p>Education, court work, memberships and publications.</p>
+        <h1>{t("credentialsTitle")}</h1>
+        <p>{t("credentialsIntro")}</p>
       </section>
       <section className="sec">
         <div className="in">
-          <h2>Education</h2>
+          <h2>{credentials("educationTitle")}</h2>
           <div className="grid">
-            <div className="card">
-              <h3>LL.M., Dispute Resolution</h3>
-              <p>
-                Straus Institute, Pepperdine Caruso School of Law. Malibu,
-                California.
-              </p>
-            </div>
-            <div className="card">
-              <h3>PG Diploma, Medical Legal Ethics</h3>
-              <p>National Law School of India University. Bangalore.</p>
-            </div>
-            <div className="card">
-              <h3>B.A. LL.B. (Hons.)</h3>
-              <p>Jindal Global Law School. Sonipat, Haryana. 2017 to 2022.</p>
-            </div>
+            {credentials.raw("cards").map((card) => (
+              <div className="card" key={card.title}>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+              </div>
+            ))}
           </div>
-          <h2 style={{ marginTop: "60px" }}>Education and professional experience</h2>
+          <h2 style={{ marginTop: "60px" }}>{credentials("experienceTitle")}</h2>
           <div className="credential-gallery">
             {credentialImages.map((image) => (
               <figure className="credential-photo" key={image.src}>
@@ -112,53 +109,28 @@ const Credentials = () => {
               </figure>
             ))}
           </div>
-          <h2 style={{ marginTop: "60px" }}>Court work</h2>
+          <h2 style={{ marginTop: "60px" }}>{credentials("courtWorkTitle")}</h2>
           <div className="grid">
-            <div className="card">
-              <h3>White Collar Claims</h3>
-              <p>Court-annexed mediation of civil white-collar claims.</p>
-            </div>
-            <div className="card">
-              <h3>Small Claims</h3>
-              <p>Court-annexed assistance in Small Claims proceedings.</p>
-            </div>
-            <div className="card">
-              <h3>Unlawful Detainer</h3>
-              <p>Mediation in landlord and tenant eviction matters.</p>
-            </div>
-            <div className="card">
-              <h3>Civil Harassment</h3>
-              <p>
-                Structured dialogue in civil harassment restraining order cases.
-              </p>
-            </div>
+            {credentials.raw("courtCards").map((card) => (
+              <div className="card" key={card.title}>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
       <section className="sec alt">
         <div className="in">
-          <h2>Memberships</h2>
-          <p>
-            Bar Council of Maharashtra and Goa. [Number, year and any mediation
-            panels to be added.]
-          </p>
-          <h2 style={{ marginTop: "40px" }}>Publications</h2>
-          <p>
-            [Articles on India–US enforcement of arbitral awards and culturally
-            intelligent mediation to be listed here.]
-          </p>
-          <h2 style={{ marginTop: "40px" }}>Skills</h2>
+          <h2>{credentials("membershipsTitle")}</h2>
+          <p>{credentials("membershipsText")}</p>
+          <h2 style={{ marginTop: "40px" }}>{credentials("publicationsTitle")}</h2>
+          <p>{credentials("publicationsText")}</p>
+          <h2 style={{ marginTop: "40px" }}>{credentials("skillsTitle")}</h2>
           <div>
-            <span className="tag">Mediation</span>
-            <span className="tag">Arbitration</span>
-            <span className="tag">Med-Arb</span>
-            <span className="tag">Negotiation</span>
-            <span className="tag">Cultural intelligence</span>
-            <span className="tag">Emotional intelligence</span>
-            <span className="tag">Conflict coaching</span>
-            <span className="tag">Contract law</span>
-            <span className="tag">Family law</span>
-            <span className="tag">Cross-border disputes</span>
+            {credentials.raw("skills").map((skill) => (
+              <span className="tag" key={skill}>{skill}</span>
+            ))}
           </div>
           <p style={{ marginTop: "30px" }}>
             <a
@@ -167,19 +139,17 @@ const Credentials = () => {
               target="_blank"
               rel="noopener"
             >
-              Download CV
+              {shared("downloadCv")}
             </a>
           </p>
         </div>
       </section>
       <section className="sec alt">
         <div className="in" style={{ textAlign: "center" }}>
-          <h2>Ready to resolve?</h2>
-          <p style={{ marginBottom: "26px" }}>
-            A focused, confidential 30 to 45 minute conversation. No obligation.
-          </p>
+          <h2>{shared("ready")}</h2>
+          <p style={{ marginBottom: "26px" }}>{shared("conversation")}</p>
           <a className="btn" href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
-            Schedule a Consultation
+            {nav("consultation")}
           </a>
         </div>
       </section>
@@ -187,4 +157,4 @@ const Credentials = () => {
   );
 };
 
-export default Credentials;
+export default CredentialsPage;

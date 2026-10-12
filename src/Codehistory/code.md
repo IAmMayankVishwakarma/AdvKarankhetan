@@ -1,6 +1,10 @@
 # Code history
 
+- 2026-10-08: Added next-intl locale routing and a language selector for English (default), Hindi, Romanized Hindi, Japanese and Spanish. Localized shared navigation, footer, disclaimer, home page and contact form; preserved page routes when switching locales and documented locale configuration in src/i18n.
 - 2026-10-08: Added the About page SEO metadata and structured data from the legacy about.html page, including title, description, canonical URL, Open Graph metadata, and Person schema for search visibility.
 - 2026-10-08: Added page-specific SEO metadata (title, description, canonical URL, Open Graph data, and relevant keywords) to the home, services, credentials, pricing, and contact routes. Added the Services page LegalService structured data from the legacy HTML.
 - 2026-10-08: Added the existing professional portrait to the home page and a relevant education/professional photo gallery to Credentials, using descriptive alt text and responsive Next.js images. Reviewed asset contents and excluded a social-media screenshot and redundant office portraits.
 - 2026-10-08: Added a responsive, keyboard-accessible BCI Rule 36 informational disclaimer modal with a blocking overlay, four disclosures, localStorage consent, and a disagree redirect.
+- 2026-10-10: Fixed the locale configuration to support the required five-language routing set (English, Hindi, Romanian, Spanish, and Japanese), updated the language selector to the correct options, and added Romanian translations for the site.
+- 2026-10-10: Verified the live Google Calendar Primary Consultation booking page is set to 60-minute appointments. The website links to this hosted appointment schedule and does not control its duration; change the schedule duration to 45 minutes in the Google Calendar appointment schedule settings.
+- 2026-10-10: Added a multilingual, text-only “Recommended by” section to the home page with five supplied professional profiles, verified institutional roles where available, and clearly labeled placeholders instead of unprovided testimonials.
