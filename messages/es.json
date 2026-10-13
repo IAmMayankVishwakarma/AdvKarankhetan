@@ -55,6 +55,7 @@
     "urgencies": ["En una semana", "En un mes", "No es urgente"],
     "message": "Mensaje",
     "confidentialMessage": "Su mensaje es confidencial.",
+    "clear": "Borrar formulario",
     "send": "Enviar mensaje"
   },
   "home": {

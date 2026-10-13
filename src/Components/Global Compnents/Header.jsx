@@ -1,8 +1,11 @@
 "use client";
 
+import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
+import site from "@/Components/site.module.css";
+import styles from "./Header.module.css";
 
 const languages = [
   { code: "en", label: "English" },
@@ -26,48 +29,68 @@ export default function Header() {
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
+  const languageMenuRef = useRef(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  function handleLanguageChange(event) {
-    router.replace(pathname, { locale: event.target.value });
+  function handleLanguageChange(language) {
+    languageMenuRef.current.open = false;
+    setIsMenuOpen(false);
+    router.replace(pathname, { locale: language });
   }
 
   return (
     <header>
-      <nav aria-label="Main">
-        <Link className="logo" href="/">
+      <nav aria-label="Main" className={styles.nav}>
+        <Link className={styles.logo} href="/">
           Karan <i>Khetan</i>
         </Link>
-        <input type="checkbox" id="mt" />
-        <label className="burger" htmlFor="mt" aria-label={t("menu")}>
-          ☰
-        </label>
-        <ul>
+        <button
+          aria-controls="main-navigation"
+          aria-expanded={isMenuOpen}
+          aria-label={t("menu")}
+          className={styles.menuToggle}
+          onClick={() => setIsMenuOpen((open) => !open)}
+          type="button"
+        >
+          {isMenuOpen ? "×" : "☰"}
+        </button>
+        <ul
+          className={`${styles.links} ${isMenuOpen ? styles.linksOpen : ""}`}
+          id="main-navigation"
+        >
           {navigation.map(({ href, key }) => (
             <li key={key}>
               <Link
                 href={href}
-                className={pathname === href ? "on" : undefined}
+                className={pathname === href ? styles.activeLink : undefined}
                 aria-current={pathname === href ? "page" : undefined}
+                onClick={() => setIsMenuOpen(false)}
               >
                 {t(key)}
               </Link>
             </li>
           ))}
         </ul>
-        <select
-          aria-label={t("language")}
-          className="language-switcher"
-          onChange={handleLanguageChange}
-          value={locale}
-        >
-          {languages.map(({ code, label }) => (
-            <option key={code} value={code}>
-              {label}
-            </option>
-          ))}
-        </select>
+        <details className={styles.languageMenu} ref={languageMenuRef}>
+          <summary aria-label={t("language")} className={styles.languageSummary}>
+            {languages.find(({ code }) => code === locale)?.label}
+          </summary>
+          <ul className={styles.languageOptions}>
+            {languages.map(({ code, label }) => (
+              <li key={code}>
+                <button
+                  type="button"
+                  aria-pressed={locale === code}
+                  onClick={() => handleLanguageChange(code)}
+                >
+                  {label}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </details>
         <a
-          className="btn"
+          className={`${site.button} ${styles.consultationButton}`}
           href="https://calendar.app.google/qPMYTsG7UpaxcGTi8"
           target="_blank"
           rel="noopener noreferrer"

@@ -1,4 +1,6 @@
 import { getTranslations } from "next-intl/server";
+import styles from "./page.module.css";
+import site from "@/Components/site.module.css";
 
 export const metadata = {
   title: "Contact | Karan Khetan — Mediator & Arbitrator",
@@ -26,7 +28,6 @@ export const metadata = {
 
 const ContactPage = async () => {
   const t = await getTranslations("pages");
-  const shared = await getTranslations("shared");
   const nav = await getTranslations("navigation");
   const contact = await getTranslations("contact");
   const matterValues = [
@@ -48,22 +49,21 @@ const ContactPage = async () => {
 
   return (
     <main>
-      <section className="hero">
-        <span className="badge">{shared("confidential")}</span>
-        <span className="lab" style={{ color: "var(--g)" }}></span>
+      <section className={site.hero}>
+        {/* <span className="badge">{shared("confidential")}</span> */}
+        <span className={site.eyebrow}></span>
         <h1>{t("contactTitle")}</h1>
         <p>{t("contactIntro")}</p>
         <a
-          className="btn"
+          className={site.button}
           href="https://calendar.app.google/qPMYTsG7UpaxcGTi8"
-          style={{ marginLeft: "12%" }}
         >
           {nav("consultation")}
         </a>
       </section>
-      <section className="sec">
-        <div className="in split" style={{ gridTemplateColumns: "1fr 1.3fr" }}>
-          <div>
+      <section className={site.section}>
+        <div className={`${site.container} ${site.split} ${styles.contactLayout}`}>
+          <div className={styles.contactDetails}>
             <h2>{contact("details")}</h2>
             <p>
               <b>{contact("email")}</b>
@@ -95,9 +95,9 @@ const ContactPage = async () => {
                 LinkedIn
               </a>
             </p>
-            <p style={{ marginTop: "24px" }}>
+            <p className={styles.consultationLink}>
               <a
-                className="btn"
+                className={site.button}
                 href="https://calendar.app.google/qPMYTsG7UpaxcGTi8"
               >
                 {nav("consultation")}
@@ -105,11 +105,11 @@ const ContactPage = async () => {
             </p>
           </div>
           <form
-            className="card"
+            className={`${site.card} ${styles.form}`}
             action="https://formspree.io/f/YOUR_FORM_ID"
             method="POST"
           >
-            <div className="row">
+            <div className={styles.fieldRow}>
               <div>
                 <label htmlFor="fn">{contact("firstName")}</label>
                 <input id="fn" name="first_name" required />
@@ -129,7 +129,7 @@ const ContactPage = async () => {
                 </option>
               ))}
             </select>
-            <div className="row">
+            <div className={styles.fieldRow}>
               <div>
                 <label htmlFor="dv">{contact("valuePrompt")}</label>
                 <select id="dv" name="value">
@@ -155,15 +155,17 @@ const ContactPage = async () => {
             </div>
             <label htmlFor="ms">{contact("message")}</label>
             <textarea id="ms" name="message" rows="5" required></textarea>
-            <p className="note" style={{ marginTop: "12px" }}>
+            <p className={`${site.note} ${styles.confidentialMessage}`}>
               {contact("confidentialMessage")}
             </p>
-            <button
-              className="btn"
-              style={{ border: "0", cursor: "pointer", marginTop: "16px" }}
-            >
-              {contact("send")}
-            </button>
+            <div className={styles.formActions}>
+              <button className={`${site.button} ${site.outlineButton}`} type="reset">
+                {contact("clear")}
+              </button>
+              <button className={site.button} type="submit">
+                {contact("send")}
+              </button>
+            </div>
           </form>
         </div>
       </section>

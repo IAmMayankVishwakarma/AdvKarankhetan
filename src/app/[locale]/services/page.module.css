@@ -1,0 +1,14 @@
+.serviceCard {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.serviceTags {
+  margin-top: auto;
+}
+
+.closingText {
+  margin-bottom: 26px;
+}

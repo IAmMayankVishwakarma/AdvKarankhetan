@@ -1,0 +1,90 @@
+.contactLayout {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+}
+
+.contactDetails {
+  min-width: 0;
+}
+
+.form {
+  min-width: 0;
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.form label {
+  display: block;
+  margin: 18px 0 6px;
+  font: 500 11px "DM Sans", sans-serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.form input,
+.form select,
+.form textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid #b9c8dc;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--n);
+  font: inherit;
+}
+
+.form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.confidentialMessage {
+  margin-top: 12px;
+}
+
+.formActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.formActions button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.consultationLink {
+  margin-top: 24px;
+}
+
+.closingText {
+  margin: 0 0 26px;
+}
+
+@media (max-width: 800px) {
+  .contactLayout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .fieldRow {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .formActions {
+    flex-direction: column-reverse;
+  }
+
+  .formActions > button {
+    width: 100%;
+  }
+}

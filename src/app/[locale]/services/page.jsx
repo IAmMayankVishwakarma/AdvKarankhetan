@@ -1,4 +1,6 @@
 import { getTranslations } from "next-intl/server";
+import styles from "./page.module.css";
+import site from "@/Components/site.module.css";
 
 export const metadata = {
   title: "Services | Karan Khetan — Mediator",
@@ -46,23 +48,22 @@ const Services = async () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(legalServiceSchema) }}
       />
-      <section className="hero">
-        <span className="badge">{shared("confidential")}</span>
-        <span className="lab" style={{ color: "var(--g)" }}></span>
+      <section className={site.hero}>
+        <span className={site.eyebrow}></span>
         <h1>{t("servicesTitle")}</h1>
         <p>{t("servicesIntro")}</p>
       </section>
-      <section className="sec">
-        <div className="in">
-          <span className="lab">{services("titleLabel")}</span>
-          <div className="grid">
+      <section className={site.section}>
+        <div className={site.container}>
+          <span className={site.eyebrow}>{services("titleLabel")}</span>
+          <div className={site.grid}>
             {services.raw("cards").map((card) => (
-              <div className="card" key={card.title}>
+              <div className={`${site.card} ${styles.serviceCard}`} key={card.title}>
                 <h3>{card.title}</h3>
                 <p>{card.description}</p>
-                <div>
+                <div className={styles.serviceTags}>
                   {card.tags.map((tag) => (
-                    <span className="tag" key={`${card.title}-${tag}`}>
+                    <span className={site.tag} key={`${card.title}-${tag}`}>
                       {tag}
                     </span>
                   ))}
@@ -72,21 +73,21 @@ const Services = async () => {
           </div>
         </div>
       </section>
-      <section className="sec alt">
-        <div className="in">
+      <section className={`${site.section} ${site.altSection}`}>
+        <div className={site.container}>
           <h2>{services("whyTitle")}</h2>
-          <ul className="l">
+          <ul className={site.list}>
             {services.raw("whyList").map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
         </div>
       </section>
-      <section className="sec alt">
-        <div className="in" style={{ textAlign: "center" }}>
+      <section className={`${site.section} ${site.altSection}`}>
+        <div className={`${site.container} ${site.centered}`}>
           <h2>{shared("ready")}</h2>
-          <p style={{ marginBottom: "26px" }}>{shared("conversation")}</p>
-          <a className="btn" href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
+          <p className={styles.closingText}>{shared("conversation")}</p>
+          <a className={site.button} href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
             {nav("consultation")}
           </a>
         </div>

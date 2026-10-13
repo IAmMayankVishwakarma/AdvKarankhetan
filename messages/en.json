@@ -55,6 +55,7 @@
     "urgencies": ["Within a week", "Within a month", "Not urgent"],
     "message": "Message",
     "confidentialMessage": "Your message is confidential.",
+    "clear": "Clear form",
     "send": "Send Message"
   },
   "home": {

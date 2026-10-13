@@ -1,0 +1,49 @@
+.portraitFrame {
+  position: sticky;
+  top: 90px;
+  align-self: start;
+  overflow: hidden;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 4 / 5;
+  border: 1px solid #d3deec;
+  border-radius: 22px;
+  background: var(--s);
+}
+
+.portraitFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sectionHeading {
+  margin-top: 40px;
+}
+
+.sectionHeadingFirst {
+  margin-top: 28px;
+}
+
+.downloadLink {
+  margin-top: 30px;
+}
+
+.closingText {
+  margin: 0 0 26px;
+}
+
+@media (max-width: 800px) {
+  .portraitFrame {
+    position: relative;
+    top: auto;
+    width: min(100%, 360px);
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .portraitFrame {
+    max-width: 280px;
+  }
+}

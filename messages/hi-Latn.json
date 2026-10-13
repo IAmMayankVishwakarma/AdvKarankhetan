@@ -55,6 +55,7 @@
     "urgencies": ["Ek hafte ke andar", "Ek mahine ke andar", "Urgent nahi"],
     "message": "Message",
     "confidentialMessage": "Aapka message confidential hai.",
+    "clear": "Form saaf karein",
     "send": "Message bhejein"
   },
   "home": {

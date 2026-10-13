@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
+import styles from "./page.module.css";
+import site from "@/Components/site.module.css";
 
 export const metadata = {
   title: "Neutral Profile | Karan Khetan — Mediator & Arbitrator",
@@ -53,15 +55,15 @@ export default async function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
       <main>
-        <section className="hero">
-          <span className="badge">{shared("confidential")}</span>
-          <span className="lab" style={{ color: "var(--g)" }}></span>
+        <section className={site.hero}>
+          {/* <span className="badge">{shared("confidential")}</span> */}
+          <span className={site.eyebrow}></span>
           <h1>{t("aboutTitle")}</h1>
           <p>{t("aboutIntro")}</p>
         </section>
-        <section className="sec">
-          <div className="in split">
-            <div className="photo">
+        <section className={site.section}>
+          <div className={`${site.container} ${site.split}`}>
+            <div className={styles.portraitFrame}>
               <Image
                 src="/image/personal/Adv karan khetan.jpeg"
                 alt="Karan Khetan, mediator and arbitrator specialising in India–US cross-border dispute resolution"
@@ -70,51 +72,51 @@ export default async function AboutPage() {
               />
             </div>
             <div>
-              <span className="lab">{about("roleDesignations")}</span>
+              <span className={site.eyebrow}>{about("roleDesignations")}</span>
               <div>
                 {about.raw("roleTags").map((tag) => (
-                  <span className="tag" key={tag}>{tag}</span>
+                  <span className={site.tag} key={tag}>{tag}</span>
                 ))}
               </div>
 
-              <h2 style={{ marginTop: "28px" }}>{about("biography")}</h2>
+              <h2 className={styles.sectionHeadingFirst}>{about("biography")}</h2>
               <p>{about("bioParagraph1")}</p>
               <p>{about("bioParagraph2")}</p>
               <p>{about("bioParagraph3")}</p>
 
-              <h2 style={{ marginTop: "40px" }}>{about("approach")}</h2>
+              <h2 className={styles.sectionHeading}>{about("approach")}</h2>
               <p>{about("approachParagraph1")}</p>
               <p>{about("approachParagraph2")}</p>
 
-              <h2 style={{ marginTop: "40px" }}>{about("practiceAreas")}</h2>
+              <h2 className={styles.sectionHeading}>{about("practiceAreas")}</h2>
               <div>
                 {about.raw("tagList").map((tag) => (
-                  <span className="tag" key={tag}>{tag}</span>
+                  <span className={site.tag} key={tag}>{tag}</span>
                 ))}
               </div>
 
-              <h2 style={{ marginTop: "40px" }}>{about("industries")}</h2>
+              <h2 className={styles.sectionHeading}>{about("industries")}</h2>
               <div>
                 {about.raw("industryTags").map((tag) => (
-                  <span className="tag" key={tag}>{tag}</span>
+                  <span className={site.tag} key={tag}>{tag}</span>
                 ))}
               </div>
 
-              <h2 style={{ marginTop: "40px" }}>{about("representativeMatters")}</h2>
-              <ul className="l">
+              <h2 className={styles.sectionHeading}>{about("representativeMatters")}</h2>
+              <ul className={site.list}>
                 {about.raw("representativeList").map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
 
-              <p className="note">{about("noPartyNames")}</p>
+              <p className={site.note}>{about("noPartyNames")}</p>
 
-              <h2 style={{ marginTop: "40px" }}>{about("memberships")}</h2>
+              <h2 className={styles.sectionHeading}>{about("memberships")}</h2>
               <p>{about("membershipsText")}</p>
 
-              <p style={{ marginTop: "30px" }}>
+              <p className={styles.downloadLink}>
                 <a
-                  className="btn line"
+                  className={`${site.button} ${site.outlineButton}`}
                   href="Karan-Khetan-Neutral-Profile.pdf"
                   target="_blank"
                   rel="noopener"
@@ -125,11 +127,11 @@ export default async function AboutPage() {
             </div>
           </div>
         </section>
-        <section className="sec alt">
-          <div className="in" style={{ textAlign: "center" }}>
+        <section className={`${site.section} ${site.altSection}`}>
+          <div className={`${site.container} ${site.centered}`}>
             <h2>{shared("ready")}</h2>
-            <p style={{ margin: "0 0 26px" }}>{shared("conversation")}</p>
-            <a className="btn" href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
+            <p className={styles.closingText}>{shared("conversation")}</p>
+            <a className={site.button} href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
               {nav("consultation")}
             </a>
           </div>

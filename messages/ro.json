@@ -72,6 +72,7 @@
     ],
     "message": "Mesaj",
     "confidentialMessage": "Mesajul dvs. este confidențial.",
+    "clear": "Șterge formularul",
     "send": "Trimite mesaj"
   },
   "home": {

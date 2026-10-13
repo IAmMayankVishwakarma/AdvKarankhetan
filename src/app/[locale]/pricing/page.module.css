@@ -1,0 +1,51 @@
+.pricingCard {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.popularCard {
+  border: 2px solid var(--g);
+}
+
+.popularLabel {
+  align-self: flex-start;
+  margin-bottom: 12px;
+  color: var(--g);
+  font: 500 11px "DM Sans", sans-serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.price {
+  margin: 10px 0;
+  font: 400 clamp(1.7rem, 4vw, 2.2rem)/1.2 "Playfair Display", Georgia, serif;
+  overflow-wrap: anywhere;
+}
+
+.price small {
+  font: 300 14px/1.5 "DM Sans", sans-serif;
+}
+
+.pricingCard > a {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.benefits {
+  margin-bottom: 20px;
+}
+
+.pricingStrip {
+  min-height: 48px;
+}
+
+.closingText {
+  margin: 0 0 26px;
+}
+
+@media (max-width: 480px) {
+  .pricingCard > a {
+    align-self: stretch;
+  }
+}
