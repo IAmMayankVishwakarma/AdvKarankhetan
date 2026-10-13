@@ -55,6 +55,7 @@
     "urgencies": ["1週間以内", "1か月以内", "急ぎではない"],
     "message": "メッセージ",
     "confidentialMessage": "お問い合わせ内容は秘密として扱います。",
+    "clear": "フォームをクリア",
     "send": "送信"
   },
   "home": {

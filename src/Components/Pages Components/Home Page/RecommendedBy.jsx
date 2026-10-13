@@ -1,32 +1,34 @@
 import { getTranslations } from "next-intl/server";
 import recommendations from "@/data/recommendations";
+import site from "@/Components/site.module.css";
+import styles from "./RecommendedBy.module.css";
 
 export default async function RecommendedBy() {
   const t = await getTranslations("home.recommendations");
 
   return (
-    <section className="sec" aria-labelledby="recommendations-title">
-      <div className="in">
-        <span className="lab">{t("label")}</span>
+    <section className={site.section} aria-labelledby="recommendations-title">
+      <div className={site.container}>
+        <span className={site.eyebrow}>{t("label")}</span>
         <h2 id="recommendations-title">{t("title")}</h2>
-        <div className="grid recommendation-grid">
+        <div className={site.grid}>
           {recommendations.map((person) => (
-            <article className="card recommendation-card" key={person.name}>
+            <article className={`${site.card} ${styles.card}`} key={person.name}>
               {person.review ? (
-                <blockquote className="recommendation-review">
+                <blockquote className={styles.review}>
                   {person.review}
                 </blockquote>
               ) : (
-                <p className="recommendation-pending">{t("pendingReview")}</p>
+                <p className={styles.pending}>{t("pendingReview")}</p>
               )}
-              <div className="recommendation-profile">
+              <div className={styles.profile}>
                 {person.designation && (
-                  <p className="recommendation-designation">
+                  <p className={styles.designation}>
                     {person.designation}
                   </p>
                 )}
                 <a
-                  className="recommendation-link"
+                  className={styles.profileLink}
                   href={person.profileUrl}
                   target="_blank"
                   rel="noopener noreferrer"

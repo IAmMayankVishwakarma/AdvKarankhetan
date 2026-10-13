@@ -1,5 +1,9 @@
 # Code history
 
+- 2026-10-12: Migrated all six localized route layouts and shared header, footer, disclaimer, and recommendations styling to CSS Modules; tightened responsive grids, forms, images, spacing, and mobile navigation while retaining the existing navy/gold design tokens.
+- 2026-10-12: Added a localized contact form reset button that clears entered values and restores the form's default selections.
+- 2026-10-12: Removed underlines from footer navigation links while preserving the existing link styling for footer contact and social links.
+- 2026-10-12: Replaced the browser-native language selector with a keyboard-accessible disclosure menu styled to match the navy-and-gold site theme; preserved locale switching on the current route and added responsive styling.
 - 2026-10-08: Added next-intl locale routing and a language selector for English (default), Hindi, Romanized Hindi, Japanese and Spanish. Localized shared navigation, footer, disclaimer, home page and contact form; preserved page routes when switching locales and documented locale configuration in src/i18n.
 - 2026-10-08: Added the About page SEO metadata and structured data from the legacy about.html page, including title, description, canonical URL, Open Graph metadata, and Person schema for search visibility.
 - 2026-10-08: Added page-specific SEO metadata (title, description, canonical URL, Open Graph data, and relevant keywords) to the home, services, credentials, pricing, and contact routes. Added the Services page LegalService structured data from the legacy HTML.

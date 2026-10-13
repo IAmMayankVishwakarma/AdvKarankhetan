@@ -1,5 +1,4 @@
 // src/app/layout.js
-import "bootstrap/dist/css/bootstrap.min.css";
 import "../globals.css";
 import BootstrapClient from "@/Components/BootstrapClient";
 import DisclaimerPopup from "@/Components/DisclaimerPopup";

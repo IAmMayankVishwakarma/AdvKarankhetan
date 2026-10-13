@@ -1,0 +1,45 @@
+.card {
+  display: flex;
+  min-width: 0;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.review,
+.pending {
+  margin-bottom: 28px;
+  color: #3b4d66;
+  font-size: 15px;
+}
+
+.review {
+  line-height: 1.7;
+}
+
+.pending {
+  font-style: italic;
+  overflow-wrap: anywhere;
+}
+
+.profile {
+  margin-top: auto;
+}
+
+.designation {
+  margin-bottom: 8px;
+  color: #5b6e88;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.profileLink {
+  color: var(--m);
+  font-weight: 500;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.profileLink:hover {
+  color: var(--b);
+}

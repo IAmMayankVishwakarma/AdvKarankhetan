@@ -1,5 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import styles from "./page.module.css";
+import site from "@/Components/site.module.css";
 
 export const metadata = {
   title: "Pricing | Karan Khetan — Mediator",
@@ -32,66 +34,66 @@ const PricingPage = async () => {
 
   return (
     <main>
-      <section className="hero">
-        <span className="badge">{shared("confidential")}</span>
-        <span className="lab" style={{ color: "var(--g)" }}></span>
+      <section className={site.hero}>
+        {/* <span className="badge">{shared("confidential")}</span> */}
+        <span className={site.eyebrow}></span>
         <h1>{t("pricingTitle")}</h1>
         <p>{t("pricingIntro")}</p>
       </section>
-      <section className="sec">
-        <div className="in">
-          <div className="grid">
-            <div className="card">
+      <section className={site.section}>
+        <div className={site.container}>
+          <div className={site.grid}>
+            <div className={`${site.card} ${styles.pricingCard}`}>
               <h3>{pricing("consultationTitle")}</h3>
-              <div className="price">{pricing("consultationPrice")}</div>
+              <div className={styles.price}>{pricing("consultationPrice")}</div>
               <p>{pricing("consultationDescription")}</p>
-              <ul className="l">
+              <ul className={`${site.list} ${styles.benefits}`}>
                 <li>{pricing("consultationBullet1")}</li>
                 <li>{pricing("consultationBullet2")}</li>
               </ul>
-              <a className="btn" href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
+              <a className={site.button} href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
                 {nav("consultation")}
               </a>
             </div>
-            <div className="card hl">
-              <span className="mc">{pricing("mostCommon")}</span>
+            <div className={`${site.card} ${styles.pricingCard} ${styles.popularCard}`}>
+              <span className={styles.popularLabel}>{pricing("mostCommon")}</span>
               <h3>{pricing("mediationTitle")}</h3>
-              <div className="price">
+              <div className={styles.price}>
                 {pricing("mediationPrice")} <small>{pricing("mediationPer")}</small>
               </div>
               <p>{pricing("mediationDescription")}</p>
-              <ul className="l">
+              <ul className={`${site.list} ${styles.benefits}`}>
                 <li>{pricing("mediationBullet1")}</li>
                 <li>{pricing("mediationBullet2")}</li>
                 <li>{pricing("mediationBullet3")}</li>
                 <li>{pricing("mediationBullet4")}</li>
               </ul>
-              <a className="btn" href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
+              <a className={site.button} href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
                 {nav("consultation")}
               </a>
             </div>
-            <div className="card">
+            <div className={`${site.card} ${styles.pricingCard}`}>
               <h3>{pricing("resolutionTitle")}</h3>
-              <div className="price">{pricing("resolutionPrice")}</div>
+              <div className={styles.price}>{pricing("resolutionPrice")}</div>
               <p>{pricing("resolutionDescription")}</p>
-              <ul className="l">
+              <ul className={`${site.list} ${styles.benefits}`}>
                 <li>{pricing("resolutionBullet1")}</li>
                 <li>{pricing("resolutionBullet2")}</li>
                 <li>{pricing("resolutionBullet3")}</li>
               </ul>
-              <Link className="btn" href="/contact">
+              <Link className={site.button} href="/contact">
                 {nav("contact")}
               </Link>
             </div>
           </div>
         </div>
       </section>
-      <div className="strip">{pricing("strip")}</div>
-      <section className="sec alt">
-        <div className="in" style={{ textAlign: "center" }}>
+      <div className={`${site.strip} ${styles.pricingStrip}`}>{pricing("strip")}</div>
+      <section className={`${site.section} ${site.altSection}`}>
+        <div className={`${site.container} ${site.centered}`}>
           <h2>{shared("ready")}</h2>
-          <p style={{ marginBottom: "26px" }}>{shared("conversation")}</p>
-          <a className="btn" href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
+          <p className={styles.closingText}>{shared("conversation")}</p>
+          <a className={site.button} href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
             {nav("consultation")}
           </a>
         </div>

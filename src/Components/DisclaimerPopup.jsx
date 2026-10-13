@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
+import site from "@/Components/site.module.css";
+import styles from "./DisclaimerPopup.module.css";
 
 const CONSENT_KEY = "bciDisclaimerAccepted";
 
@@ -100,36 +102,36 @@ export default function DisclaimerPopup() {
   }
 
   return (
-    <div className="disclaimer-overlay">
+    <div className={styles.overlay}>
       <section
         aria-labelledby="disclaimer-title"
         aria-modal="true"
-        className="disclaimer-dialog"
+        className={styles.dialog}
         ref={dialogRef}
         role="dialog"
       >
-        <span className="lab">{t("eyebrow")}</span>
+        <span className={site.eyebrow}>{t("eyebrow")}</span>
         <h2 id="disclaimer-title">{t("title")}</h2>
-        <ul className="disclaimer-points">
+        <ul className={styles.points}>
           {t.raw("points").map((point) => (
             <li key={point}>{point}</li>
           ))}
         </ul>
         {storageError && (
-          <p className="disclaimer-error" role="alert">
+          <p className={styles.error} role="alert">
             {storageError}
           </p>
         )}
-        <div className="disclaimer-actions">
+        <div className={styles.actions}>
           <button
-            className="btn line"
+            className={`${site.button} ${site.outlineButton}`}
             onClick={() => window.location.assign("https://www.google.com")}
             type="button"
           >
             {t("disagree")}
           </button>
           <button
-            className="btn"
+            className={site.button}
             onClick={handleAgree}
             ref={agreeButtonRef}
             type="button"

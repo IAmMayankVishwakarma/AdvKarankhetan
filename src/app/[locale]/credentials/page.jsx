@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
+import styles from "./page.module.css";
+import site from "@/Components/site.module.css";
 
 export const metadata = {
   title: "Credentials | Karan Khetan — Mediator",
@@ -79,27 +81,27 @@ const CredentialsPage = async () => {
 
   return (
     <main>
-      <section className="hero">
-        <span className="badge">{shared("confidential")}</span>
-        <span className="lab" style={{ color: "var(--g)" }}></span>
+      <section className={site.hero}>
+        {/* <span className="badge">{shared("confidential")}</span> */}
+        <span className={site.eyebrow}></span>
         <h1>{t("credentialsTitle")}</h1>
         <p>{t("credentialsIntro")}</p>
       </section>
-      <section className="sec">
-        <div className="in">
+      <section className={site.section}>
+        <div className={site.container}>
           <h2>{credentials("educationTitle")}</h2>
-          <div className="grid">
+          <div className={site.grid}>
             {credentials.raw("cards").map((card) => (
-              <div className="card" key={card.title}>
+              <div className={site.card} key={card.title}>
                 <h3>{card.title}</h3>
                 <p>{card.description}</p>
               </div>
             ))}
           </div>
-          <h2 style={{ marginTop: "60px" }}>{credentials("experienceTitle")}</h2>
-          <div className="credential-gallery">
+          <h2 className={styles.sectionHeading}>{credentials("experienceTitle")}</h2>
+          <div className={styles.gallery}>
             {credentialImages.map((image) => (
-              <figure className="credential-photo" key={image.src}>
+              <figure className={styles.galleryItem} key={image.src}>
                 <Image
                   src={image.src}
                   alt={image.alt}
@@ -109,10 +111,10 @@ const CredentialsPage = async () => {
               </figure>
             ))}
           </div>
-          <h2 style={{ marginTop: "60px" }}>{credentials("courtWorkTitle")}</h2>
-          <div className="grid">
+          <h2 className={styles.sectionHeading}>{credentials("courtWorkTitle")}</h2>
+          <div className={site.grid}>
             {credentials.raw("courtCards").map((card) => (
-              <div className="card" key={card.title}>
+              <div className={site.card} key={card.title}>
                 <h3>{card.title}</h3>
                 <p>{card.description}</p>
               </div>
@@ -120,21 +122,21 @@ const CredentialsPage = async () => {
           </div>
         </div>
       </section>
-      <section className="sec alt">
-        <div className="in">
+      <section className={`${site.section} ${site.altSection}`}>
+        <div className={site.container}>
           <h2>{credentials("membershipsTitle")}</h2>
           <p>{credentials("membershipsText")}</p>
-          <h2 style={{ marginTop: "40px" }}>{credentials("publicationsTitle")}</h2>
+          <h2 className={styles.sectionHeading}>{credentials("publicationsTitle")}</h2>
           <p>{credentials("publicationsText")}</p>
-          <h2 style={{ marginTop: "40px" }}>{credentials("skillsTitle")}</h2>
+          <h2 className={styles.sectionHeading}>{credentials("skillsTitle")}</h2>
           <div>
             {credentials.raw("skills").map((skill) => (
-              <span className="tag" key={skill}>{skill}</span>
+              <span className={site.tag} key={skill}>{skill}</span>
             ))}
           </div>
-          <p style={{ marginTop: "30px" }}>
+          <p className={styles.closingText}>
             <a
-              className="btn"
+              className={site.button}
               href="Karan-Khetan-Neutral-Profile.pdf"
               target="_blank"
               rel="noopener"
@@ -144,11 +146,11 @@ const CredentialsPage = async () => {
           </p>
         </div>
       </section>
-      <section className="sec alt">
-        <div className="in" style={{ textAlign: "center" }}>
+      <section className={`${site.section} ${site.altSection}`}>
+        <div className={`${site.container} ${site.centered}`}>
           <h2>{shared("ready")}</h2>
-          <p style={{ marginBottom: "26px" }}>{shared("conversation")}</p>
-          <a className="btn" href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
+          <p className={styles.ctaText}>{shared("conversation")}</p>
+          <a className={site.button} href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
             {nav("consultation")}
           </a>
         </div>
