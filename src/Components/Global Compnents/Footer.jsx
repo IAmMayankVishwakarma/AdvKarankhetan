@@ -35,8 +35,6 @@ export default async function Footer() {
           </nav>
           <div className={styles.contactLinks}>
             <a href="mailto:adkkhetan@gmail.com">adkkhetan@gmail.com</a>
-            <a href="tel:+18057216293">+1 (805) 721-6293</a>
-            <a href="tel:+919817696856">+91 98176 96856</a>
             <a href="https://www.linkedin.com/in/" rel="noopener">
               LinkedIn
             </a>

@@ -71,16 +71,6 @@ const ContactPage = async () => {
               <a href="mailto:adkkhetan@gmail.com">adkkhetan@gmail.com</a>
             </p>
             <p>
-              <b>{contact("phoneUs")}</b>
-              <br />
-              <a href="tel:+18057216293">+1 (805) 721-6293</a>
-            </p>
-            <p>
-              <b>{contact("phoneIndia")}</b>
-              <br />
-              <a href="tel:+919817696856">+91 98176 96856</a>
-            </p>
-            <p>
               <b>{contact("locations")}</b>
               <br />
               {contact("locationDescription")}

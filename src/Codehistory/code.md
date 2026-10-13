@@ -1,5 +1,6 @@
 # Code history
 
+- 2026-10-13: Removed all visible phone numbers and phone links from the site footer, contact page, and legacy static pages while keeping email and LinkedIn contact options intact.
 - 2026-10-12: Migrated all six localized route layouts and shared header, footer, disclaimer, and recommendations styling to CSS Modules; tightened responsive grids, forms, images, spacing, and mobile navigation while retaining the existing navy/gold design tokens.
 - 2026-10-12: Added a localized contact form reset button that clears entered values and restores the form's default selections.
 - 2026-10-12: Removed underlines from footer navigation links while preserving the existing link styling for footer contact and social links.

@@ -33,7 +33,6 @@ const legalServiceSchema = {
   name: "Karan Khetan, Mediator and Arbitrator",
   url: "https://karankhetan.com",
   areaServed: ["India", "United States"],
-  telephone: "+1-805-721-6293",
 };
 
 const Services = async () => {
