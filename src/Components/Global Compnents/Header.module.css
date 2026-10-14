@@ -14,11 +14,23 @@
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   flex: 0 0 auto;
   color: #fff;
   font: 400 1.3rem "Playfair Display", Georgia, serif;
   text-decoration: none;
   white-space: nowrap;
+}
+
+.logoMark {
+  display: block;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .logo i {
@@ -185,7 +197,7 @@
     padding: 10px 4px;
   }
 
-  .consultationButton {
+  .nav .consultationButton {
     display: none;
   }
 }
@@ -197,11 +209,17 @@
   }
 
   .logo {
-    font-size: 1.1rem;
+    gap: 7px;
+    font-size: 1.05rem;
+  }
+
+  .logoMark {
+    width: 36px;
+    height: 36px;
   }
 
   .languageSummary {
-    min-width: 96px;
+    min-width: 90px;
     padding-inline: 7px;
     font-size: 12px;
   }
@@ -212,6 +230,35 @@
 
   .languageOptions button {
     font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav {
+    gap: 6px;
+    padding-inline: 3%;
+  }
+
+  .logo {
+    gap: 5px;
+    font-size: 0.95rem;
+  }
+
+  .logoMark {
+    width: 32px;
+    height: 32px;
+  }
+
+  .menuToggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .languageSummary {
+    min-width: 80px;
+    gap: 8px;
+    padding-inline: 6px;
+    font-size: 11px;
   }
 }
 

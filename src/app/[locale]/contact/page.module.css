@@ -64,6 +64,30 @@
   margin-top: 24px;
 }
 
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid rgba(12, 30, 53, 0.14);
+  border-radius: 999px;
+  background: rgba(184, 146, 90, 0.08);
+  color: var(--n);
+  text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.socialLink svg {
+  color: var(--g);
+  flex-shrink: 0;
+}
+
+.socialLink:hover {
+  border-color: rgba(184, 146, 90, 0.7);
+  background: rgba(184, 146, 90, 0.12);
+  transform: translateY(-1px);
+}
+
 .closingText {
   margin: 0 0 26px;
 }

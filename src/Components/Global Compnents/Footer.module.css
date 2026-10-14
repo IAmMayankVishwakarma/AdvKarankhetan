@@ -54,6 +54,31 @@
   color: var(--g);
 }
 
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(184, 146, 90, 0.43);
+  border-radius: 999px;
+  background: rgba(184, 146, 90, 0.08);
+  color: #f4f7fb;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.socialLink svg {
+  color: var(--g);
+  flex-shrink: 0;
+}
+
+.socialLink:hover {
+  border-color: rgba(184, 146, 90, 0.8);
+  background: rgba(184, 146, 90, 0.12);
+  color: var(--g);
+  transform: translateY(-1px);
+}
+
 @media (max-width: 600px) {
   .footer {
     padding: 40px 5% 32px;
