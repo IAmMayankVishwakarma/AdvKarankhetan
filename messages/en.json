@@ -36,8 +36,6 @@
   "contact": {
     "details": "Contact details",
     "email": "Email",
-    "phoneUs": "Phone (US)",
-    "phoneIndia": "Phone (India)",
     "locations": "Locations",
     "locationDescription": "Nagpur, India and California, USA. Virtual sessions worldwide.",
     "responseTime": "Response time",
@@ -46,13 +44,30 @@
     "lastName": "Last name",
     "emailAddress": "Email address",
     "matterPrompt": "I am reaching out about",
-    "matters": ["Family dispute", "Commercial or business dispute", "Cross-border India–US dispute", "Landlord and tenant", "Consumer dispute", "Workplace or ombuds", "Other"],
+    "matters": [
+      "Family dispute",
+      "Commercial or business dispute",
+      "Cross-border India–US dispute",
+      "Landlord and tenant",
+      "Consumer dispute",
+      "Workplace or ombuds",
+      "Other"
+    ],
     "valuePrompt": "Approximate dispute value",
     "selectRange": "Select range",
-    "valueRanges": ["Under ₹5 lakh", "₹5 to 50 lakh", "₹50 lakh to 5 crore", "Above ₹5 crore"],
+    "valueRanges": [
+      "Under ₹5 lakh",
+      "₹5 to 50 lakh",
+      "₹50 lakh to 5 crore",
+      "Above ₹5 crore"
+    ],
     "urgencyPrompt": "How urgent is this matter?",
     "selectUrgency": "Select urgency",
-    "urgencies": ["Within a week", "Within a month", "Not urgent"],
+    "urgencies": [
+      "Within a week",
+      "Within a month",
+      "Not urgent"
+    ],
     "message": "Message",
     "confidentialMessage": "Your message is confidential.",
     "clear": "Clear form",
@@ -81,7 +96,17 @@
     "quoteAttribution": "Justice Sandra Day O'Connor, U.S. Supreme Court",
     "practiceLabel": "Practice areas",
     "practiceTitle": "Matters I handle",
-    "practiceTypes": ["Family and succession", "Cross-border India–US", "Commercial and business", "Consumer disputes", "Ombuds for corporates", "Landlord and tenant", "Workplace conflicts", "Civil harassment", "Medical legal disputes"],
+    "practiceTypes": [
+      "Family and succession",
+      "Cross-border India–US",
+      "Commercial and business",
+      "Consumer disputes",
+      "Ombuds for corporates",
+      "Landlord and tenant",
+      "Workplace conflicts",
+      "Civil harassment",
+      "Medical legal disputes"
+    ],
     "serviceIntro": "Eight services across mediation, arbitration, coaching and corporate ombuds work.",
     "viewServices": "View all services",
     "outcomesLabel": "Client outcomes",
@@ -176,42 +201,75 @@
       {
         "title": "Mediation",
         "description": "A confidential, structured process where I help parties reach their own resolution. About 70 to 80 percent of mediated cases settle.",
-        "tags": ["Commercial", "Family", "Cross-border", "Workplace"]
+        "tags": [
+          "Commercial",
+          "Family",
+          "Cross-border",
+          "Workplace"
+        ]
       },
       {
         "title": "Arbitration",
         "description": "A faster, private alternative to court that delivers a binding decision without the delay and publicity of litigation.",
-        "tags": ["Commercial", "International", "Contract"]
+        "tags": [
+          "Commercial",
+          "International",
+          "Contract"
+        ]
       },
       {
         "title": "Med-Arb",
         "description": "A hybrid process. Parties attempt mediation first. If unresolved, the matter moves to binding arbitration.",
-        "tags": ["Hybrid", "Binding", "Efficient"]
+        "tags": [
+          "Hybrid",
+          "Binding",
+          "Efficient"
+        ]
       },
       {
         "title": "Conflict Coaching",
         "description": "One-on-one coaching to build communication and de-escalation skills before disagreements become disputes.",
-        "tags": ["Individuals", "Teams", "Leadership"]
+        "tags": [
+          "Individuals",
+          "Teams",
+          "Leadership"
+        ]
       },
       {
         "title": "Cultural Intelligence Consulting",
         "description": "Helping cross-cultural teams and international organisations reduce friction and build trust.",
-        "tags": ["India–US", "Cross-cultural", "Global teams"]
+        "tags": [
+          "India–US",
+          "Cross-cultural",
+          "Global teams"
+        ]
       },
       {
         "title": "Virtual Dispute Resolution",
         "description": "Full online mediation and arbitration across geographies and time zones, with particular experience in India–US matters.",
-        "tags": ["Remote", "India and US", "International"]
+        "tags": [
+          "Remote",
+          "India and US",
+          "International"
+        ]
       },
       {
         "title": "Consumer Dispute Resolution",
         "description": "Helping consumers and businesses resolve product, service and contract disputes without consumer court.",
-        "tags": ["Consumer rights", "Product disputes", "Service contracts"]
+        "tags": [
+          "Consumer rights",
+          "Product disputes",
+          "Service contracts"
+        ]
       },
       {
         "title": "Ombuds for Corporates",
         "description": "An independent, confidential ombudsperson who gives employees and stakeholders a safe channel to raise concerns early.",
-        "tags": ["Workplace", "Confidential", "Organisational"]
+        "tags": [
+          "Workplace",
+          "Confidential",
+          "Organisational"
+        ]
       }
     ]
   },

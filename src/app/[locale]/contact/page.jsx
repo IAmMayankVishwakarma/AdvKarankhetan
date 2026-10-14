@@ -1,4 +1,6 @@
 import { getTranslations } from "next-intl/server";
+// import { Linkedin } from "lucide-react";
+import { FaLinkedin as Linkedin } from "react-icons/fa";
 import styles from "./page.module.css";
 import site from "@/Components/site.module.css";
 
@@ -25,6 +27,8 @@ export const metadata = {
     type: "website",
   },
 };
+
+const linkedInProfile = "https://www.linkedin.com/in/karan-khetan-5b462942";
 
 const ContactPage = async () => {
   const t = await getTranslations("pages");
@@ -71,16 +75,6 @@ const ContactPage = async () => {
               <a href="mailto:adkkhetan@gmail.com">adkkhetan@gmail.com</a>
             </p>
             <p>
-              <b>{contact("phoneUs")}</b>
-              <br />
-              <a href="tel:+18057216293">+1 (805) 721-6293</a>
-            </p>
-            <p>
-              <b>{contact("phoneIndia")}</b>
-              <br />
-              <a href="tel:+919817696856">+91 98176 96856</a>
-            </p>
-            <p>
               <b>{contact("locations")}</b>
               <br />
               {contact("locationDescription")}
@@ -91,8 +85,15 @@ const ContactPage = async () => {
               {contact("responseDescription")}
             </p>
             <p>
-              <a href="https://www.linkedin.com/in/" rel="noopener">
-                LinkedIn
+              <a
+                className={styles.socialLink}
+                href={linkedInProfile}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Karan Khetan LinkedIn profile"
+              >
+                <Linkedin size={16} aria-hidden="true" />
+                <span>LinkedIn</span>
               </a>
             </p>
             <p className={styles.consultationLink}>

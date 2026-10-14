@@ -36,8 +36,6 @@
   "contact": {
     "details": "Date de contact",
     "email": "E-mail",
-    "phoneUs": "Telefon (SUA)",
-    "phoneIndia": "Telefon (India)",
     "locations": "Locații",
     "locationDescription": "Nagpur, India și California, SUA. Sesiuni virtuale la nivel mondial.",
     "responseTime": "Timp de răspuns",
@@ -203,42 +201,75 @@
       {
         "title": "Mediere",
         "description": "Un proces confidențial și structurat în care ajut părțile să ajungă la propria soluție. Aproximativ 70-80% dintre cauzele mediate se soluționează.",
-        "tags": ["Comercial", "Familial", "Transfrontalier", "Loc de muncă"]
+        "tags": [
+          "Comercial",
+          "Familial",
+          "Transfrontalier",
+          "Loc de muncă"
+        ]
       },
       {
         "title": "Arbitraj",
         "description": "O alternativă mai rapidă și privată la instanță, care oferă o decizie obligatorie fără întârzierile și publicitatea litigiului.",
-        "tags": ["Comercial", "Internațional", "Contract"]
+        "tags": [
+          "Comercial",
+          "Internațional",
+          "Contract"
+        ]
       },
       {
         "title": "Med-Arb",
         "description": "Un proces hibrid. Părțile încearcă medierea mai întâi. Dacă nu se rezolvă, cauza trece la arbitraj obligatoriu.",
-        "tags": ["Hibrid", "Obligatoriu", "Eficient"]
+        "tags": [
+          "Hibrid",
+          "Obligatoriu",
+          "Eficient"
+        ]
       },
       {
         "title": "Coaching în conflicte",
         "description": "Coaching individual pentru a dezvolta abilități de comunicare și de deescaladare înainte ca neînțelegerile să devină dispute.",
-        "tags": ["Persoane", "Echipe", "Leadership"]
+        "tags": [
+          "Persoane",
+          "Echipe",
+          "Leadership"
+        ]
       },
       {
         "title": "Consultanță în inteligență culturală",
         "description": "Ajutăm echipele interculturale și organizațiile internaționale să reducă fricțiunea și să construiască încredere.",
-        "tags": ["India–SUA", "Intercultural", "Echipe globale"]
+        "tags": [
+          "India–SUA",
+          "Intercultural",
+          "Echipe globale"
+        ]
       },
       {
         "title": "Mediere virtuală",
         "description": "Mediere și arbitraj online complete în diferite geografie și fusuri orare, cu experiență în cauze India–SUA.",
-        "tags": ["La distanță", "India și SUA", "Internațional"]
+        "tags": [
+          "La distanță",
+          "India și SUA",
+          "Internațional"
+        ]
       },
       {
         "title": "Rezoluție a disputelor de consum",
         "description": "Ajutăm consumatorii și companiile să rezolve litigii privind produse, servicii și contracte fără tribunalul pentru consumatori.",
-        "tags": ["Drepturile consumatorului", "Dispute privind produsele", "Contracte de servicii"]
+        "tags": [
+          "Drepturile consumatorului",
+          "Dispute privind produsele",
+          "Contracte de servicii"
+        ]
       },
       {
         "title": "Ombuds pentru companii",
         "description": "Un ombuds independent și confidențial care oferă angajaților și părților interesate un canal sigur pentru a ridica preocupările la timp.",
-        "tags": ["Muncă", "Confidențial", "Organizațional"]
+        "tags": [
+          "Muncă",
+          "Confidențial",
+          "Organizațional"
+        ]
       }
     ]
   },

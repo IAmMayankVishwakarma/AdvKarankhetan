@@ -1,5 +1,10 @@
 # Code history
 
+- 2026-10-14: Resolved the main/themeChange package script conflict by retaining Webpack for both development and production builds.
+- 2026-10-14: Ensured the consultation button stays hidden in the responsive header by scoping its mobile visibility rule to the navigation, and verified the layout across phone and desktop widths.
+- 2026-10-14: Switched the development server to Next.js Webpack mode after reproducing recurring full-page reloads caused by Turbopack app-endpoint panics; verified the route stays stable.
+- 2026-10-14: Added the supplied Karan Khetan logo to the responsive shared header and browser favicon, with compact spacing for narrow mobile screens.
+- 2026-10-13: Added the client’s official LinkedIn profile URL to the footer and contact page, styled the profile button with a navy-and-gold icon treatment to match the brand, and removed the outdated phone-number entries from the site copy and metadata.
 - 2026-10-12: Migrated all six localized route layouts and shared header, footer, disclaimer, and recommendations styling to CSS Modules; tightened responsive grids, forms, images, spacing, and mobile navigation while retaining the existing navy/gold design tokens.
 - 2026-10-12: Added a localized contact form reset button that clears entered values and restores the form's default selections.
 - 2026-10-12: Removed underlines from footer navigation links while preserving the existing link styling for footer contact and social links.
