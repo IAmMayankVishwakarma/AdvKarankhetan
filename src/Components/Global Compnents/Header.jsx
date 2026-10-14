@@ -48,7 +48,7 @@ export default function Header() {
             className={styles.logoMark}
             height={44}
             priority
-            src="/karan%20sir%20logo.png"
+            src="/karansirlogo.png"
             width={44}
           />
           {/* <span>
