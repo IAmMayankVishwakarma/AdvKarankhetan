@@ -1,4 +1,7 @@
 import { getTranslations } from "next-intl/server";
+// import { Linkedin } from "lucide-react";
+import { FaLinkedin as Linkedin} from "react-icons/fa";
+import { FaEnvelope as Gmail } from "react-icons/fa";
 import { Link } from "@/i18n/navigation";
 import styles from "./Footer.module.css";
 
@@ -14,6 +17,7 @@ const navigation = [
 export default async function Footer() {
   const t = await getTranslations("navigation");
   const shared = await getTranslations("shared");
+  const linkedInProfile = "https://www.linkedin.com/in/karan-khetan-5b462942";
 
   return (
     <footer className={styles.footer}>
@@ -34,11 +38,25 @@ export default async function Footer() {
             ))}
           </nav>
           <div className={styles.contactLinks}>
-            <a href="mailto:adkkhetan@gmail.com">adkkhetan@gmail.com</a>
-            <a href="tel:+18057216293">+1 (805) 721-6293</a>
-            <a href="tel:+919817696856">+91 98176 96856</a>
-            <a href="https://www.linkedin.com/in/" rel="noopener">
-              LinkedIn
+            {/* <a href="mailto:adkkhetan@gmail.com">adkkhetan@gmail.com</a> */}
+            <a
+              className={styles.socialLink}
+              href="mailto:adkkhetan@gmail.com" 
+              target="_blank"
+              aria-label="Karan Khetan Gmail"
+            >
+              <Gmail size={16} aria-hidden="true" />
+              <span>Gmail</span>
+            </a>
+            <a
+              className={styles.socialLink}
+              href={linkedInProfile}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Karan Khetan LinkedIn profile"
+            >
+              <Linkedin size={16} aria-hidden="true" />
+              <span>LinkedIn</span>
             </a>
           </div>
         </div>

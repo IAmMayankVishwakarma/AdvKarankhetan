@@ -45,7 +45,7 @@ export default async function AboutPage() {
     url: "https://karankhetan.com",
     alumniOf: "Pepperdine Caruso School of Law",
     knowsLanguage: ["English", "Hindi", "Marathi"],
-    sameAs: ["https://www.linkedin.com/in/"],
+    sameAs: ["https://www.linkedin.com/in/karan-khetan-5b462942"],
   };
 
   return (

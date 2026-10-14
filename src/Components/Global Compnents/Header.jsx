@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
@@ -42,7 +43,17 @@ export default function Header() {
     <header>
       <nav aria-label="Main" className={styles.nav}>
         <Link className={styles.logo} href="/">
-          Karan <i>Khetan</i>
+          <Image
+            alt=""
+            className={styles.logoMark}
+            height={44}
+            priority
+            src="/karan%20sir%20logo.png"
+            width={44}
+          />
+          <span>
+            Karan <i>Khetan</i>
+          </span>
         </Link>
         <button
           aria-controls="main-navigation"

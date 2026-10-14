@@ -18,12 +18,6 @@ export const metadata = {
   alternates: {
     canonical: "https://karankhetan.com/",
   },
-  icons: {
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230C1E35'/%3E%3Ctext x='16' y='22' font-family='serif' font-size='15' font-weight='bold' fill='%23B8925A' text-anchor='middle'%3EKK%3C/text%3E%3C/svg%3E",
-  },
-
-
-
   openGraph: {
     title: "Karan Khetan | Mediator & Arbitrator | India & California",
     description:
@@ -69,7 +63,7 @@ export default async function LocaleLayout({ children, params }) {
               url: "https://karankhetan.com",
               alumniOf: "Pepperdine Caruso School of Law",
               knowsLanguage: ["English", "Hindi", "Marathi"],
-              sameAs: ["https://www.linkedin.com/in/"],
+              sameAs: ["https://www.linkedin.com/in/karan-khetan-5b462942"],
             }),
           }}
         />
