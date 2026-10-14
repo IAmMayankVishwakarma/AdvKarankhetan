@@ -51,9 +51,9 @@ export default function Header() {
             src="/karan%20sir%20logo.png"
             width={44}
           />
-          <span>
+          {/* <span>
             Karan <i>Khetan</i>
-          </span>
+          </span> */}
         </Link>
         <button
           aria-controls="main-navigation"

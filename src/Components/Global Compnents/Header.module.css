@@ -197,7 +197,7 @@
     padding: 10px 4px;
   }
 
-  .consultationButton {
+  .nav .consultationButton {
     display: none;
   }
 }
