@@ -1,5 +1,6 @@
 # Code history
 
+- 2026-10-19: Added responsive, localized login and signup pages that reuse the shared site shell and navy/gold visual language; added client-side validation and password visibility controls, and clearly marked authentication as unconfigured so credentials are not submitted.
 - 2026-10-14: Ensured the consultation button stays hidden in the responsive header by scoping its mobile visibility rule to the navigation, and verified the layout across phone and desktop widths.
 - 2026-10-14: Switched the development server to Next.js Webpack mode after reproducing recurring full-page reloads caused by Turbopack app-endpoint panics; verified the route stays stable.
 - 2026-10-14: Added the supplied Karan Khetan logo to the responsive shared header and browser favicon, with compact spacing for narrow mobile screens.
