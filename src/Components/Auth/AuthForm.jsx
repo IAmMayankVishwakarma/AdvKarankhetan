@@ -17,15 +17,16 @@ export default function AuthForm({ mode }) {
   const [visibility, setVisibility] = useState(initialVisibility);
   const [formError, setFormError] = useState("");
   const [formNotice, setFormNotice] = useState("");
-  const [isUnavailable, setIsUnavailable] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     setFormError("");
     setFormNotice("");
 
     const form = event.currentTarget;
     const password = form.querySelector("#password").value;
+    const email = form.querySelector("#email").value;
 
     if (isSignup) {
       if (!/(?=.*[A-Za-z])(?=.*\d).{8,}/.test(password)) {
@@ -39,14 +40,42 @@ export default function AuthForm({ mode }) {
       }
     }
 
-    setIsUnavailable(true);
-    setFormNotice(t("unavailable"));
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(`/api/auth/${isSignup ? "signup" : "login"}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: isSignup ? form.querySelector("#fullName").value : undefined,
+          email,
+          password,
+        }),
+      });
+
+      if (!response.ok) {
+        setFormError(
+          response.status === 409
+            ? t("emailTaken")
+            : response.status === 401
+              ? t("invalidCredentials")
+              : t("requestError"),
+        );
+        return;
+      }
+
+      setFormNotice(t("authSuccess"));
+      form.reset();
+    } catch {
+      setFormError(t("requestError"));
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   function clearFeedback() {
     setFormError("");
     setFormNotice("");
-    setIsUnavailable(false);
   }
 
   function toggleVisibility(field) {
@@ -176,10 +205,14 @@ export default function AuthForm({ mode }) {
 
             <button
               className={styles.submitButton}
-              disabled={isUnavailable}
+              disabled={isSubmitting}
               type="submit"
             >
-              {isSignup ? t("createAccount") : t("login")}
+              {isSubmitting
+                ? t("submitting")
+                : isSignup
+                  ? t("createAccount")
+                  : t("login")}
             </button>
           </form>
 
