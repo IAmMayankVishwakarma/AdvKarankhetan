@@ -18,12 +18,18 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Backend setup
 
-The API uses Next.js Node.js Route Handlers and Prisma ORM with a local SQLite
-database for development.
+The API uses Next.js Node.js Route Handlers and Prisma ORM with a local MySQL
+database (for example, MySQL/MariaDB started through XAMPP) for development.
 
-1. Copy `.env.example` to `.env`.
-2. Run `npm run db:migrate` to create/update the local database.
-3. Run `npm run dev`.
+1. Start MySQL in XAMPP and create a database named `karankhetan`.
+2. Copy `.env.example` to `.env`. The example uses XAMPP's common `root` user
+   with no password; update `DATABASE_URL` if your MySQL credentials differ.
+3. Run `npm run db:migrate` to create/update the MySQL tables.
+4. Run `npm run dev`.
+
+The active Prisma migration history is in `prisma/migrations-mysql`; the existing
+`prisma/migrations` directory contains the original SQLite history and is kept
+separate. Switching providers does not copy existing SQLite data into MySQL.
 
 Available starter endpoints:
 
@@ -37,8 +43,7 @@ The Prisma schema includes the initial booking, price, payment, availability, an
 admin audit data models. Razorpay, Google Calendar, and Resend credentials are
 placeholders only; payment processing, calendar synchronization, email delivery,
 password recovery, and admin endpoints are not enabled yet. Configure production
-credentials and a production database before deploying; the local SQLite database
-is intended for development, not production hosting.
+credentials and a production database before deploying.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 

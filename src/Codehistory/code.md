@@ -1,5 +1,7 @@
 # Code history
 
+- 2026-10-26: Switched local Prisma development from SQLite to the XAMPP MySQL/MariaDB database `karankhetan`; added the Prisma MariaDB adapter, isolated MySQL migrations from the original SQLite history, and documented local environment setup and verification.
+- 2026-10-26: Documented the project-specific steps for moving Prisma 7 from SQLite to PostgreSQL, including adapter/configuration changes, a separate PostgreSQL migration history, environment setup, and connection verification.
 - 2026-10-20: Added the first Node.js API foundation using Next.js Route Handlers and Prisma 7 with local SQLite; created initial user/session, contact, booking, payment, pricing, availability and audit models, database health/contact/auth endpoints, secure password hashing and server-side session cookies, and connected the localized contact and account forms. Documented local setup and provider configuration placeholders; live email, password reset, payment, Google Calendar and admin workflows remain for later phases.
 - 2026-10-19: Added responsive, localized login and signup pages that reuse the shared site shell and navy/gold visual language; added client-side validation and password visibility controls, and clearly marked authentication as unconfigured so credentials are not submitted.
 - 2026-10-14: Ensured the consultation button stays hidden in the responsive header by scoping its mobile visibility rule to the navigation, and verified the layout across phone and desktop widths.
