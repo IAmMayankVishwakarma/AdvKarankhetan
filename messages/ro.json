@@ -6,6 +6,11 @@
     "credentials": "Acreditări",
     "pricing": "Prețuri",
     "contact": "Contact",
+    "login": "Autentificare",
+    "signup": "Înregistrare",
+    "myAppointments": "Programările mele",
+    "adminPanel": "Panou de administrare",
+    "logout": "Deconectare",
     "consultation": "Programare consultație",
     "menu": "Deschide meniul",
     "language": "Limbă"

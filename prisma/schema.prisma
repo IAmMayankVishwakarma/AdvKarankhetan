@@ -8,18 +8,21 @@ datasource db {
 }
 
 model User {
-  id           String    @id @default(cuid())
-  name         String
-  email        String    @unique
-  passwordHash String
-  role         String    @default("CLIENT")
-  status       String    @default("ACTIVE")
-  blockedAt    DateTime?
-  createdAt    DateTime  @default(now())
-  updatedAt    DateTime  @updatedAt
-  sessions     Session[]
-  resetTokens  PasswordResetToken[]
-  bookings     Booking[]
+  id                       String    @id @default(cuid())
+  name                     String
+  email                    String    @unique
+  passwordHash             String
+  role                     String    @default("USER")
+  status                   String    @default("ACTIVE")
+  blockedAt                DateTime?
+  freeAppointmentUsedAt    DateTime?
+  createdAt                DateTime  @default(now())
+  updatedAt                DateTime  @updatedAt
+  sessions                 Session[]
+  resetTokens              PasswordResetToken[]
+  bookings                 Booking[]
+  bookingChanges           BookingChange[]
+  auditLogs                AuditLog[]
 }
 
 model Session {
@@ -77,23 +80,29 @@ model Service {
 }
 
 model Booking {
-  id                     String    @id @default(cuid())
+  id                     String          @id @default(cuid())
   userId                 String
   serviceId              String
   startsAt               DateTime
   endsAt                 DateTime
   timeZone               String
-  status                 String    @default("PENDING")
-  paymentStatus          String    @default("UNPAID")
-  googleCalendarEventId  String?   @unique
-  createdAt              DateTime  @default(now())
-  updatedAt              DateTime  @updatedAt
-  user                   User      @relation(fields: [userId], references: [id], onDelete: Restrict)
-  service                Service   @relation(fields: [serviceId], references: [id], onDelete: Restrict)
+  status                 String          @default("PENDING_PAYMENT")
+  paymentStatus          String          @default("UNPAID")
+  amountMinorUnits       Int             @default(0)
+  isFreeAppointment      Boolean         @default(false)
+  paymentExpiresAt       DateTime?
+  idempotencyKey         String?         @unique
+  googleCalendarEventId  String?         @unique
+  createdAt              DateTime        @default(now())
+  updatedAt              DateTime        @updatedAt
+  user                   User            @relation(fields: [userId], references: [id], onDelete: Restrict)
+  service                Service         @relation(fields: [serviceId], references: [id], onDelete: Restrict)
   payment                Payment?
+  changes                BookingChange[]
 
   @@index([startsAt, endsAt, status])
   @@index([userId, createdAt])
+  @@index([paymentExpiresAt, status])
 }
 
 model Payment {
@@ -117,8 +126,56 @@ model DailyAvailability {
   date         DateTime @unique
   maxMeetings  Int
   isAvailable  Boolean  @default(true)
+  opensAt      String?
+  closesAt     String?
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
+}
+
+model Holiday {
+  id          String   @id @default(cuid())
+  date        DateTime @unique
+  description String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model BusinessSetting {
+  id                  String   @id @default("default")
+  timeZone            String   @default("Asia/Kolkata")
+  defaultMaxMeetings  Int      @default(4)
+  defaultOpenTime     String   @default("09:00")
+  defaultCloseTime    String   @default("17:00")
+  cancellationHours   Int      @default(24)
+  allowReschedule     Boolean  @default(true)
+  updatedAt           DateTime @updatedAt
+}
+
+model BookingChange {
+  id              String   @id @default(cuid())
+  bookingId       String
+  actorId         String?
+  action          String
+  previousStartsAt DateTime?
+  previousEndsAt   DateTime?
+  newStartsAt      DateTime?
+  newEndsAt        DateTime?
+  reason          String?
+  createdAt       DateTime @default(now())
+  booking         Booking  @relation(fields: [bookingId], references: [id], onDelete: Restrict)
+  actor           User?    @relation(fields: [actorId], references: [id], onDelete: SetNull)
+
+  @@index([bookingId, createdAt])
+}
+
+model PaymentWebhookEvent {
+  id         String   @id @default(cuid())
+  eventId    String   @unique
+  eventType  String
+  paymentId  String?
+  createdAt  DateTime @default(now())
+
+  @@index([paymentId, createdAt])
 }
 
 model AuditLog {
@@ -128,6 +185,7 @@ model AuditLog {
   targetType String
   targetId   String?
   createdAt  DateTime @default(now())
+  actor      User?    @relation(fields: [actorId], references: [id], onDelete: SetNull)
 
   @@index([actorId, createdAt])
   @@index([targetType, targetId, createdAt])

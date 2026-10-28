@@ -5,11 +5,13 @@
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build",
+    "test": "node --test",
     "start": "next start",
     "lint": "eslint",
     "postinstall": "prisma generate",
     "db:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev"
+    "db:migrate": "prisma migrate dev",
+    "admin:promote": "node --experimental-strip-types scripts/promote-admin.mjs"
   },
   "dependencies": {
     "@prisma/adapter-mariadb": "^7.10.1",

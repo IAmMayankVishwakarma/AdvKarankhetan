@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 // import { Linkedin } from "lucide-react";
 import { FaLinkedin as Linkedin } from "react-icons/fa";
 import styles from "./page.module.css";
@@ -43,12 +44,12 @@ const ContactPage = async () => {
         <span className={site.eyebrow}></span>
         <h1>{t("contactTitle")}</h1>
         <p>{t("contactIntro")}</p>
-        <a
+        <Link
           className={site.button}
-          href="https://calendar.app.google/qPMYTsG7UpaxcGTi8"
+          href="/book"
         >
           {nav("consultation")}
-        </a>
+        </Link>
       </section>
       <section className={site.section}>
         <div className={`${site.container} ${site.split} ${styles.contactLayout}`}>
@@ -82,12 +83,12 @@ const ContactPage = async () => {
               </a>
             </p>
             <p className={styles.consultationLink}>
-              <a
+              <Link
                 className={site.button}
-                href="https://calendar.app.google/qPMYTsG7UpaxcGTi8"
+                href="/book"
               >
                 {nav("consultation")}
-              </a>
+              </Link>
             </p>
           </div>
           <ContactForm />

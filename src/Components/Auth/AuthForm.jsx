@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import styles from "./AuthForm.module.css";
 
@@ -13,6 +14,7 @@ const initialVisibility = {
 
 export default function AuthForm({ mode }) {
   const t = useTranslations("auth");
+  const locale = useLocale();
   const isSignup = mode === "signup";
   const [visibility, setVisibility] = useState(initialVisibility);
   const [formError, setFormError] = useState("");
@@ -64,8 +66,14 @@ export default function AuthForm({ mode }) {
         return;
       }
 
-      setFormNotice(t("authSuccess"));
-      form.reset();
+      const query = new URLSearchParams(window.location.search);
+      const requestedPath = query.get("returnTo");
+      const destination =
+        requestedPath?.startsWith(`/${locale}/`) &&
+        !requestedPath.startsWith(`//`)
+          ? requestedPath
+          : `/${locale}/account`;
+      window.location.assign(destination);
     } catch {
       setFormError(t("requestError"));
     } finally {

@@ -6,6 +6,11 @@
     "credentials": "資格",
     "pricing": "料金",
     "contact": "お問い合わせ",
+    "login": "ログイン",
+    "signup": "登録",
+    "myAppointments": "予約一覧",
+    "adminPanel": "管理パネル",
+    "logout": "ログアウト",
     "consultation": "相談を予約",
     "menu": "メニューを開く",
     "language": "言語"

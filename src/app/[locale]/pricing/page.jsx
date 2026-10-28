@@ -51,9 +51,9 @@ const PricingPage = async () => {
                 <li>{pricing("consultationBullet1")}</li>
                 <li>{pricing("consultationBullet2")}</li>
               </ul>
-              <a className={site.button} href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
+              <Link className={site.button} href="/book">
                 {nav("consultation")}
-              </a>
+              </Link>
             </div>
             <div className={`${site.card} ${styles.pricingCard} ${styles.popularCard}`}>
               <span className={styles.popularLabel}>{pricing("mostCommon")}</span>
@@ -68,9 +68,9 @@ const PricingPage = async () => {
                 <li>{pricing("mediationBullet3")}</li>
                 <li>{pricing("mediationBullet4")}</li>
               </ul>
-              <a className={site.button} href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
+              <Link className={site.button} href="/book">
                 {nav("consultation")}
-              </a>
+              </Link>
             </div>
             <div className={`${site.card} ${styles.pricingCard}`}>
               <h3>{pricing("resolutionTitle")}</h3>
@@ -93,9 +93,9 @@ const PricingPage = async () => {
         <div className={`${site.container} ${site.centered}`}>
           <h2>{shared("ready")}</h2>
           <p className={styles.closingText}>{shared("conversation")}</p>
-          <a className={site.button} href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
+          <Link className={site.button} href="/book">
             {nav("consultation")}
-          </a>
+          </Link>
         </div>
       </section>
     </main>

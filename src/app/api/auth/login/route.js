@@ -1,10 +1,13 @@
 import { createSession, verifyPassword } from "@/lib/auth";
-import { readJsonBody } from "@/lib/http";
+import { readJsonBody, rejectCrossOriginRequest } from "@/lib/http";
 import { prisma } from "@/lib/prisma";
 
 export const runtime = "nodejs";
 
 export async function POST(request) {
+  const originError = rejectCrossOriginRequest(request);
+  if (originError) return originError;
+
   if (!request.headers.get("content-type")?.toLowerCase().startsWith("application/json")) {
     return Response.json({ error: "Content-Type must be application/json." }, { status: 415 });
   }

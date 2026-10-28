@@ -6,6 +6,11 @@
     "credentials": "Credentials",
     "pricing": "Pricing",
     "contact": "Contact",
+    "login": "Login",
+    "signup": "Sign Up",
+    "myAppointments": "My Appointments",
+    "adminPanel": "Admin Panel",
+    "logout": "Log out",
     "consultation": "Schedule a Consultation",
     "menu": "Open menu",
     "language": "Language"

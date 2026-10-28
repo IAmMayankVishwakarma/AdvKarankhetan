@@ -6,6 +6,11 @@
     "credentials": "योग्यताएँ",
     "pricing": "शुल्क",
     "contact": "संपर्क",
+    "login": "लॉग इन",
+    "signup": "साइन अप",
+    "myAppointments": "मेरी अपॉइंटमेंट",
+    "adminPanel": "एडमिन पैनल",
+    "logout": "लॉग आउट",
     "consultation": "परामर्श तय करें",
     "menu": "मेनू खोलें",
     "language": "भाषा"

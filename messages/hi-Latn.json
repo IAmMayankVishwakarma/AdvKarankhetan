@@ -6,6 +6,11 @@
     "credentials": "Yogyata",
     "pricing": "Fees",
     "contact": "Sampark",
+    "login": "Login",
+    "signup": "Sign Up",
+    "myAppointments": "Meri appointments",
+    "adminPanel": "Admin panel",
+    "logout": "Logout",
     "consultation": "Consultation book karein",
     "menu": "Menu kholen",
     "language": "Bhasha"

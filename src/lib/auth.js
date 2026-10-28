@@ -85,6 +85,32 @@ export async function getSessionUser() {
   };
 }
 
+export async function requireUser() {
+  return getSessionUser();
+}
+
+export async function requireAdmin() {
+  const user = await getSessionUser();
+  return user?.role === "ADMIN" ? user : null;
+}
+
+export async function authorizeAdmin() {
+  const user = await getSessionUser();
+  if (!user) {
+    return {
+      user: null,
+      response: Response.json({ error: "Authentication required." }, { status: 401 }),
+    };
+  }
+  if (user.role !== "ADMIN") {
+    return {
+      user: null,
+      response: Response.json({ error: "Administrator access required." }, { status: 403 }),
+    };
+  }
+  return { user, response: null };
+}
+
 export async function deleteCurrentSession() {
   const cookieStore = await cookies();
   const token = cookieStore.get(SESSION_COOKIE)?.value;
