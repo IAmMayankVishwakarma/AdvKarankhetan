@@ -32,7 +32,12 @@ const legalServiceSchema = {
   "@type": "LegalService",
   name: "Karan Khetan, Mediator and Arbitrator",
   url: "https://karankhetan.com",
+<<<<<<< HEAD
+  areaServed: ["India", "United States"],
+};
+=======
   areaServed: ["India", "United States"],};
+>>>>>>> 8e182f2a239f0185f3bc3cc5f5a634e5d123ae23
 
 const Services = async () => {
   const t = await getTranslations("pages");

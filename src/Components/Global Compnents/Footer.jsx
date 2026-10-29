@@ -38,6 +38,11 @@ export default async function Footer() {
             ))}
           </nav>
           <div className={styles.contactLinks}>
+<<<<<<< HEAD
+            <a href="mailto:adkkhetan@gmail.com">adkkhetan@gmail.com</a>
+            <a href="https://www.linkedin.com/in/" rel="noopener">
+              LinkedIn
+=======
             {/* <a href="mailto:adkkhetan@gmail.com">adkkhetan@gmail.com</a> */}
             <a
               className={styles.socialLink}
@@ -57,6 +62,7 @@ export default async function Footer() {
             >
               <Linkedin size={16} aria-hidden="true" />
               <span>LinkedIn</span>
+>>>>>>> 8e182f2a239f0185f3bc3cc5f5a634e5d123ae23
             </a>
           </div>
         </div>
