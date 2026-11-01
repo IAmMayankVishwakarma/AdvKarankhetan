@@ -1,0 +1,195 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id                       String    @id @default(cuid())
+  name                     String
+  email                    String    @unique
+  passwordHash             String
+  role                     String    @default("USER")
+  status                   String    @default("ACTIVE")
+  blockedAt                DateTime?
+  freeAppointmentUsedAt    DateTime?
+  createdAt                DateTime  @default(now())
+  updatedAt                DateTime  @updatedAt
+  sessions                 Session[]
+  resetTokens              PasswordResetToken[]
+  bookings                 Booking[]
+  bookingChanges           BookingChange[]
+  auditLogs                AuditLog[]
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  tokenHash String   @unique
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model PasswordResetToken {
+  id        String    @id @default(cuid())
+  tokenHash String    @unique
+  userId    String
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model ContactInquiry {
+  id        String   @id @default(cuid())
+  firstName String
+  lastName  String
+  email     String
+  matter    String
+  value     String?
+  urgency   String?
+  message   String
+  status    String   @default("NEW")
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([status, createdAt])
+}
+
+model Service {
+  id              String    @id @default(cuid())
+  name            String
+  description     String
+  priceMinorUnits Int
+  currency        String    @default("INR")
+  durationMinutes Int
+  active          Boolean   @default(true)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  bookings        Booking[]
+
+  @@index([active, name])
+  @@index([createdAt])
+}
+
+model Booking {
+  id                     String          @id @default(cuid())
+  userId                 String
+  serviceId              String
+  startsAt               DateTime
+  endsAt                 DateTime
+  timeZone               String
+  status                 String          @default("PENDING_PAYMENT")
+  paymentStatus          String          @default("UNPAID")
+  amountMinorUnits       Int             @default(0)
+  isFreeAppointment      Boolean         @default(false)
+  paymentExpiresAt       DateTime?
+  idempotencyKey         String?         @unique
+  googleCalendarEventId  String?         @unique
+  createdAt              DateTime        @default(now())
+  updatedAt              DateTime        @updatedAt
+  user                   User            @relation(fields: [userId], references: [id], onDelete: Restrict)
+  service                Service         @relation(fields: [serviceId], references: [id], onDelete: Restrict)
+  payment                Payment?
+  changes                BookingChange[]
+
+  @@index([startsAt, endsAt, status])
+  @@index([userId, createdAt])
+  @@index([paymentExpiresAt, status])
+}
+
+model Payment {
+  id                String   @id @default(cuid())
+  bookingId         String   @unique
+  provider          String
+  providerOrderId   String?  @unique
+  providerPaymentId String?  @unique
+  amountMinorUnits  Int
+  currency          String   @default("INR")
+  status            String   @default("PENDING")
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  booking           Booking  @relation(fields: [bookingId], references: [id], onDelete: Restrict)
+
+  @@index([status, createdAt])
+}
+
+model DailyAvailability {
+  id           String   @id @default(cuid())
+  date         DateTime @unique
+  maxMeetings  Int
+  isAvailable  Boolean  @default(true)
+  opensAt      String?
+  closesAt     String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Holiday {
+  id          String   @id @default(cuid())
+  date        DateTime @unique
+  description String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model BusinessSetting {
+  id                  String   @id @default("default")
+  timeZone            String   @default("Asia/Kolkata")
+  defaultMaxMeetings  Int      @default(4)
+  defaultOpenTime     String   @default("09:00")
+  defaultCloseTime    String   @default("17:00")
+  cancellationHours   Int      @default(24)
+  allowReschedule     Boolean  @default(true)
+  updatedAt           DateTime @updatedAt
+}
+
+model BookingChange {
+  id              String   @id @default(cuid())
+  bookingId       String
+  actorId         String?
+  action          String
+  previousStartsAt DateTime?
+  previousEndsAt   DateTime?
+  newStartsAt      DateTime?
+  newEndsAt        DateTime?
+  reason          String?
+  createdAt       DateTime @default(now())
+  booking         Booking  @relation(fields: [bookingId], references: [id], onDelete: Restrict)
+  actor           User?    @relation(fields: [actorId], references: [id], onDelete: SetNull)
+
+  @@index([bookingId, createdAt])
+}
+
+model PaymentWebhookEvent {
+  id         String   @id @default(cuid())
+  eventId    String   @unique
+  eventType  String
+  paymentId  String?
+  createdAt  DateTime @default(now())
+
+  @@index([paymentId, createdAt])
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  actorId    String?
+  action     String
+  targetType String
+  targetId   String?
+  createdAt  DateTime @default(now())
+  actor      User?    @relation(fields: [actorId], references: [id], onDelete: SetNull)
+
+  @@index([actorId, createdAt])
+  @@index([targetType, targetId, createdAt])
+}

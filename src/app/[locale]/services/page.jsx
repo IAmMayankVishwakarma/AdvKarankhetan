@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import styles from "./page.module.css";
 import site from "@/Components/site.module.css";
+import { Link } from "@/i18n/navigation";
 
 export const metadata = {
   title: "Services | Karan Khetan — Mediator",
@@ -90,9 +91,9 @@ const Services = async () => {
         <div className={`${site.container} ${site.centered}`}>
           <h2>{shared("ready")}</h2>
           <p className={styles.closingText}>{shared("conversation")}</p>
-          <a className={site.button} href="https://calendar.app.google/qPMYTsG7UpaxcGTi8">
+          <Link className={site.button} href="/book">
             {nav("consultation")}
-          </a>
+          </Link>
         </div>
       </section>
     </main>

@@ -10,6 +10,21 @@
   min-width: 0;
 }
 
+.honeypot {
+  position: absolute;
+  left: -10000px;
+}
+
+.formError {
+  margin-top: 12px;
+  color: #a32222;
+}
+
+.formSuccess {
+  margin-top: 12px;
+  color: var(--t);
+}
+
 .fieldRow {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

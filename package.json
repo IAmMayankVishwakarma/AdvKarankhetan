@@ -13,23 +13,36 @@
 =======
     "dev": "next dev --webpack",
     "build": "next build",
+<<<<<<< HEAD
 >>>>>>> 8e182f2a239f0185f3bc3cc5f5a634e5d123ae23
 >>>>>>> 5adf2052a2c06e63993e640c2e0432b7db7e44d5
+=======
+    "test": "node --test",
+>>>>>>> 9c90b5fa96a54784f59c136b2eb7e301de3bf4bd
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "postinstall": "prisma generate",
+    "db:generate": "prisma generate",
+    "admin:promote": "node --experimental-strip-types scripts/promote-admin.mjs"
   },
   "dependencies": {
+    "@prisma/adapter-pg": "^7.10.1",
+    "@prisma/client": "^7.10.1",
     "bootstrap": "^5.3.8",
+    "dotenv": "^18.0.8",
     "lucide-react": "^1.53.0",
-    "next": "16.3.8",
+    "pg": "^8.23.1",
+    "next": "16.4.3",
     "next-intl": "^4.14.9",
     "react": "19.2.8",
     "react-dom": "19.2.8",
-    "react-icons": "^5.7.0"
+    "react-icons": "^5.7.0",
+    "@supabase/supabase-js": "^2.0.0"
   },
   "devDependencies": {
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
-    "eslint-config-next": "16.3.8"
+    "eslint-config-next": "16.4.3",
+    "prisma": "^7.10.1"
   }
 }

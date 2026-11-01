@@ -41,12 +41,12 @@ export default async function HomePage() {
           <span className={site.eyebrow}>{t("role")}</span>
           <h1>{t("headline")}</h1>
           <p>{t("intro")}</p>
-          <a
+          <Link
             className={site.button}
-            href="https://calendar.app.google/qPMYTsG7UpaxcGTi8"
+            href="/book"
           >
             {nav("consultation")}
-          </a>
+          </Link>
         </section>
         <div className={site.strip}>{t("institutions")}</div>
         <section className={site.section}>
@@ -144,12 +144,12 @@ export default async function HomePage() {
             <p className={styles.practiceIntro}>
               {shared("conversation")}
             </p>
-            <a
+            <Link
               className={site.button}
-              href="https://calendar.app.google/qPMYTsG7UpaxcGTi8"
+              href="/book"
             >
               {nav("consultation")}
-            </a>
+            </Link>
           </div>
         </section>
       </main>

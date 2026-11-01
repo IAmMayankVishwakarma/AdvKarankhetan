@@ -39,8 +39,11 @@
 
 .links {
   display: flex;
+  min-width: 0;
+  flex: 1 1 auto;
   align-items: center;
-  gap: clamp(12px, 1.8vw, 26px);
+  justify-content: center;
+  gap: clamp(8px, 1.3vw, 18px);
   padding: 0;
   list-style: none;
 }
@@ -54,6 +57,85 @@
 
 .links a:hover,
 .links a.activeLink {
+  color: var(--g);
+}
+
+.accountMenu {
+  position: relative;
+  color: #cfd9e8;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.accountMenu summary {
+  display: inline-flex;
+  max-width: clamp(120px, 15vw, 190px);
+  min-height: 44px;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.accountMenu summary::-webkit-details-marker {
+  display: none;
+}
+
+.accountMenu summary::after {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  border-right: 1px solid var(--g);
+  border-bottom: 1px solid var(--g);
+  content: "";
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 160ms ease;
+}
+
+.accountMenu details[open] summary::after {
+  transform: translateY(2px) rotate(225deg);
+}
+
+.accountName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.accountOptions {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 22;
+  min-width: 190px;
+  padding: 6px;
+  border: 1px solid rgb(184 146 90 / 55%);
+  border-radius: 10px;
+  background: var(--m);
+  list-style: none;
+}
+
+.accountOptions a,
+.accountOptions button {
+  display: flex;
+  width: 100%;
+  min-height: 44px;
+  align-items: center;
+  padding: 9px 11px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #cfd9e8;
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.accountOptions a:hover,
+.accountOptions button:hover {
+  background: rgb(184 146 90 / 14%);
   color: var(--g);
 }
 
@@ -195,6 +277,22 @@
     display: block;
     min-height: 44px;
     padding: 10px 4px;
+  }
+
+  .accountMenu summary {
+    display: flex;
+    max-width: 100%;
+    width: fit-content;
+    align-items: center;
+  }
+
+  .accountName {
+    max-width: min(72vw, 300px);
+  }
+
+  .accountOptions {
+    position: static;
+    margin: 0 0 8px;
   }
 
   .nav .consultationButton {
