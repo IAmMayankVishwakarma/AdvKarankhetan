@@ -1,14 +1,7 @@
 # Code history
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 - 2026-10-14: Resolved the main/themeChange package script conflict by retaining Webpack for both development and production builds.
-=======
-<<<<<<< HEAD
 - 2026-10-13: Removed all visible phone numbers and phone links from the site footer, contact page, and legacy static pages while keeping email and LinkedIn contact options intact.
-=======
->>>>>>> 5adf2052a2c06e63993e640c2e0432b7db7e44d5
-=======
+
 - 2026-10-29: Switched the Prisma runtime adapter and schema provider from MariaDB/MySQL to Supabase PostgreSQL, deferred client initialization so builds need no database credentials, added a relational schema migration with check constraints and RLS enabled while denying direct API-role table access, translated MySQL-specific locking queries, bounded and tested Razorpay webhook request bodies, added standard HTTP security headers, upgraded Next.js and transitive dependencies to resolve all npm audit advisories, updated database setup documentation, and retained legacy migration histories without applying them. Existing production data and Supabase project access were not available for migration or integration verification.
 - 2026-10-28: Aligned the authenticated customer menu in the responsive navbar, closed header dropdowns on selection/outside click/Escape/navigation, and reorganized the admin dashboard into an icon-led responsive sidebar with preserved booking and configuration workflows.
 - 2026-10-26: Made first-time booking settings initialization resilient to simultaneous requests by handling the unique-key race; confirmed production health, unauthenticated 401 responses, regular-user admin 403 response, and booking behavior.
@@ -17,12 +10,10 @@
 - 2026-10-26: Documented the project-specific steps for moving Prisma 7 from SQLite to PostgreSQL, including adapter/configuration changes, a separate PostgreSQL migration history, environment setup, and connection verification.
 - 2026-10-20: Added the first Node.js API foundation using Next.js Route Handlers and Prisma 7 with local SQLite; created initial user/session, contact, booking, payment, pricing, availability and audit models, database health/contact/auth endpoints, secure password hashing and server-side session cookies, and connected the localized contact and account forms. Documented local setup and provider configuration placeholders; live email, password reset, payment, Google Calendar and admin workflows remain for later phases.
 - 2026-10-19: Added responsive, localized login and signup pages that reuse the shared site shell and navy/gold visual language; added client-side validation and password visibility controls, and clearly marked authentication as unconfigured so credentials are not submitted.
->>>>>>> 9c90b5fa96a54784f59c136b2eb7e301de3bf4bd
 - 2026-10-14: Ensured the consultation button stays hidden in the responsive header by scoping its mobile visibility rule to the navigation, and verified the layout across phone and desktop widths.
 - 2026-10-14: Switched the development server to Next.js Webpack mode after reproducing recurring full-page reloads caused by Turbopack app-endpoint panics; verified the route stays stable.
 - 2026-10-14: Added the supplied Karan Khetan logo to the responsive shared header and browser favicon, with compact spacing for narrow mobile screens.
 - 2026-10-13: Added the client’s official LinkedIn profile URL to the footer and contact page, styled the profile button with a navy-and-gold icon treatment to match the brand, and removed the outdated phone-number entries from the site copy and metadata.
->>>>>>> 8e182f2a239f0185f3bc3cc5f5a634e5d123ae23
 - 2026-10-12: Migrated all six localized route layouts and shared header, footer, disclaimer, and recommendations styling to CSS Modules; tightened responsive grids, forms, images, spacing, and mobile navigation while retaining the existing navy/gold design tokens.
 - 2026-10-12: Added a localized contact form reset button that clears entered values and restores the form's default selections.
 - 2026-10-12: Removed underlines from footer navigation links while preserving the existing link styling for footer contact and social links.
