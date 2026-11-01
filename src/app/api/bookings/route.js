@@ -160,7 +160,7 @@ export async function POST(request) {
     if (!businessDay) return errorResponse("Could not resolve the selected business date.", 400);
     const { start: dayStart, end: dayEnd } = businessDay;
     const result = await prisma.$transaction(async (tx) => {
-      await tx.$queryRaw`SELECT \`id\` FROM \`User\` WHERE \`id\` = ${user.id} FOR UPDATE`;
+      await tx.$queryRaw`SELECT "id" FROM "User" WHERE "id" = ${user.id} FOR UPDATE`;
       const availability = await lockAvailabilityDay(tx, availabilityDate, settings);
       if (!availability.isAvailable) {
         throw Object.assign(new Error("This date is unavailable."), { status: 409 });

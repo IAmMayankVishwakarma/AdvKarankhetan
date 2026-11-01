@@ -1,22 +1,29 @@
-import { PrismaMariaDb } from "@prisma/adapter-mariadb";
+import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "@/generated/prisma/client";
 
-const databaseUrl = process.env.DATABASE_URL;
-
-if (!databaseUrl) {
-  throw new Error("DATABASE_URL is not set");
-}
-
-const adapter = new PrismaMariaDb(databaseUrl);
-
 const globalForPrisma = globalThis;
+let client = globalForPrisma.prisma;
 
-export const prisma =
-  globalForPrisma.prisma ??
-  new PrismaClient({
-    adapter,
+function getClient() {
+  if (client) return client;
+
+  const databaseUrl = process.env.SUPABASE_DB_URL;
+  if (!databaseUrl) throw new Error("SUPABASE_DB_URL is not set");
+
+  client = new PrismaClient({
+    adapter: new PrismaPg({ connectionString: databaseUrl }),
   });
 
-if (process.env.NODE_ENV !== "production") {
-  globalForPrisma.prisma = prisma;
+  if (process.env.NODE_ENV !== "production") {
+    globalForPrisma.prisma = client;
+  }
+  return client;
 }
+
+export const prisma = new Proxy({}, {
+  get(_target, property) {
+    const activeClient = getClient();
+    const value = Reflect.get(activeClient, property, activeClient);
+    return typeof value === "function" ? value.bind(activeClient) : value;
+  },
+});

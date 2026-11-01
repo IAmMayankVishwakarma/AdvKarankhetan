@@ -18,18 +18,57 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Backend setup
 
-The API uses Next.js Node.js Route Handlers and Prisma ORM with a local MySQL
-database (for example, MySQL/MariaDB started through XAMPP) for development.
+The API uses Next.js Node.js Route Handlers and Prisma ORM with Supabase
+PostgreSQL. Database access is server-side; the browser talks only to the
+application API. Do not expose `SUPABASE_DB_URL` to client code.
 
-1. Start MySQL in XAMPP and create a database named `karankhetan`.
-2. Copy `.env.example` to `.env`. The example uses XAMPP's common `root` user
-   with no password; update `DATABASE_URL` if your MySQL credentials differ.
-3. Run `npx prisma migrate deploy` to apply the checked-in MySQL migrations.
-4. Run `npm run dev`.
+1. Create a Supabase project and copy the server-side PostgreSQL connection
+   string from Project Settings > Database into `.env` as `SUPABASE_DB_URL`.
+   Keep the password secret. Use the connection mode recommended for the
+   deployment host; a transaction pooler may be needed on serverless hosts.
+2. Copy `.env.example` to `.env` and set the required variables.
+3. Install the Supabase CLI if needed, authenticate, and link this repository to
+   the intended project:
 
-The active Prisma migration history is in `prisma/migrations-mysql`; the existing
-`prisma/migrations` directory contains the original SQLite history and is kept
-separate. Switching providers does not copy existing SQLite data into MySQL.
+   ```bash
+   npx supabase login
+   npx supabase link --project-ref YOUR_PROJECT_REF
+   ```
+
+4. Review the migration, then apply it to the linked project:
+
+   ```bash
+   npx supabase db push
+   ```
+
+5. Run `npm run dev`.
+
+The active database schema is versioned under `supabase/migrations`. The
+`prisma/migrations` and `prisma/migrations-mysql` directories are retained as
+historical SQLite/MySQL records only; do not apply them to Supabase. Prisma
+remains the application ORM, while Supabase PostgreSQL is the only persistent
+database.
+
+The migration creates an empty schema; it does not copy records from the former
+SQLite or MySQL databases. Before moving existing data, make a verified backup
+of each source database, import into a separate Supabase project or staging
+schema, preserve the current string IDs, and reconcile row counts and key
+relationships for every table before switching production traffic. Test booking
+capacity and payment state after import. Do not delete or modify source data
+during this process. No production database credentials or data dump were
+provided, so a data transfer has not been run.
+
+RLS is enabled and forced for all application tables. `anon` and `authenticated`
+Supabase API roles have no table privileges and receive explicit deny policies;
+the existing application uses its server-side custom sessions and user/admin
+authorization checks. The privileged database connection must therefore remain
+server-only. No Supabase Auth, browser database client, storage bucket, or
+service-role key is configured by this migration. Requests to expose database
+tables directly to Supabase clients require a separate RLS design and security
+review.
+
+The Next.js server adds `nosniff`, frame denial, referrer, and permissions
+headers. Configure HSTS at the HTTPS deployment edge.
 
 ## Accounts and appointments
 
@@ -76,12 +115,17 @@ to confirm an expired booking and requires support to arrange any refund. Cancel
 a paid appointment does not automatically issue a refund. Email notifications,
 automated refunds, password recovery, and built-in login rate limiting are not
 implemented; configure rate limiting at the hosting/WAF layer before production.
-Set production environment variables and run `npx prisma migrate deploy` during
-deployment. Do not push `.env` or provider secrets to Git.
+Set the production `SUPABASE_DB_URL` and Razorpay variables in the hosting
+provider's secret store. Apply reviewed schema changes with `npx supabase db
+push` before deploying application code. Keep a database backup before every
+production migration; rollback should use a reviewed forward migration or
+restore into a separate project, not an unreviewed destructive reset.
 
 ## Validation
 
 Run `npm test`, `npm run lint`, `npx prisma validate`, and `npm run build`.
+Prisma generation and production builds do not need a reachable database;
+database migrations and CRUD/RLS integration tests do.
 The automated tests cover the date/timezone helpers; payment-provider behavior
 still requires Razorpay test credentials and webhook testing in the provider
 dashboard.

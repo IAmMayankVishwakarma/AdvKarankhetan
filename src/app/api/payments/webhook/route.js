@@ -1,7 +1,9 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
+import { readRawBody } from "@/lib/http";
 import { prisma } from "@/lib/prisma";
 
 export const runtime = "nodejs";
+const MAX_WEBHOOK_BODY_BYTES = 65_536;
 
 function validSignature(body, suppliedSignature, secret) {
   if (!/^[a-f0-9]{64}$/i.test(suppliedSignature ?? "")) return false;
@@ -15,14 +17,24 @@ export async function POST(request) {
   if (!secret) return Response.json({ error: "Webhook is not configured." }, { status: 503 });
   const signature = request.headers.get("x-razorpay-signature");
   const eventId = request.headers.get("x-razorpay-event-id");
-  const rawBody = await request.text();
+  let parsedBody;
+  try {
+    parsedBody = await readRawBody(request, MAX_WEBHOOK_BODY_BYTES);
+  } catch (error) {
+    console.error("Failed to read Razorpay webhook body:", error);
+    return Response.json({ error: "Could not read webhook payload." }, { status: 400 });
+  }
+  if (parsedBody.error) {
+    return Response.json({ error: parsedBody.error }, { status: parsedBody.status });
+  }
+  const rawBody = parsedBody.body;
   if (!eventId || eventId.length > 191 || !validSignature(rawBody, signature, secret)) {
     return Response.json({ error: "Invalid webhook signature or event id." }, { status: 400 });
   }
 
   let event;
   try {
-    event = JSON.parse(rawBody);
+    event = JSON.parse(rawBody.toString("utf8"));
   } catch {
     return Response.json({ error: "Invalid webhook payload." }, { status: 400 });
   }

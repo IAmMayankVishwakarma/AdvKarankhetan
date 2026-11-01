@@ -10,17 +10,16 @@
     "lint": "eslint",
     "postinstall": "prisma generate",
     "db:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev",
     "admin:promote": "node --experimental-strip-types scripts/promote-admin.mjs"
   },
   "dependencies": {
-    "@prisma/adapter-mariadb": "^7.10.1",
+    "@prisma/adapter-pg": "^7.10.1",
     "@prisma/client": "^7.10.1",
     "bootstrap": "^5.3.8",
     "dotenv": "^18.0.8",
     "lucide-react": "^1.53.0",
-    "mariadb": "^3.5.4",
-    "next": "16.3.8",
+    "pg": "^8.23.1",
+    "next": "16.4.3",
     "next-intl": "^4.14.9",
     "react": "19.2.8",
     "react-dom": "19.2.8",
@@ -29,7 +28,7 @@
   "devDependencies": {
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
-    "eslint-config-next": "16.3.8",
+    "eslint-config-next": "16.4.3",
     "prisma": "^7.10.1"
   }
 }

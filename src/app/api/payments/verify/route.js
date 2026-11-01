@@ -73,7 +73,7 @@ export async function POST(request) {
     }
 
     const result = await prisma.$transaction(async (tx) => {
-      await tx.$queryRaw`SELECT \`id\` FROM \`Payment\` WHERE \`id\` = ${payment.id} FOR UPDATE`;
+      await tx.$queryRaw`SELECT "id" FROM "Payment" WHERE "id" = ${payment.id} FOR UPDATE`;
       const current = await tx.payment.findUnique({
         where: { id: payment.id },
         include: { booking: true },

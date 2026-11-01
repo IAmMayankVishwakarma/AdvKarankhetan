@@ -1,5 +1,5 @@
 import "dotenv/config";
-import { PrismaMariaDb } from "@prisma/adapter-mariadb";
+import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "../src/generated/prisma/client.ts";
 
 const configuredEmail = process.env.ADMIN_BOOTSTRAP_EMAIL?.trim().toLowerCase();
@@ -12,12 +12,12 @@ if (requestedEmail !== configuredEmail) {
   throw new Error("Pass the exact ADMIN_BOOTSTRAP_EMAIL as the command argument.");
 }
 
-if (!process.env.DATABASE_URL) {
-  throw new Error("DATABASE_URL is not set.");
+if (!process.env.SUPABASE_DB_URL) {
+  throw new Error("SUPABASE_DB_URL is not set.");
 }
 
 const prisma = new PrismaClient({
-  adapter: new PrismaMariaDb(process.env.DATABASE_URL),
+  adapter: new PrismaPg({ connectionString: process.env.SUPABASE_DB_URL }),
 });
 
 try {

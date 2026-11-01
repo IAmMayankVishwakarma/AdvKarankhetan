@@ -30,6 +30,31 @@ export async function readJsonBody(request, maxBytes = 16_384) {
   }
 }
 
+export async function readRawBody(request, maxBytes = 16_384) {
+  const reader = request.body?.getReader();
+  if (!reader) {
+    return { error: "Invalid request body.", status: 400 };
+  }
+
+  const chunks = [];
+  let byteLength = 0;
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+
+    byteLength += value.byteLength;
+    if (byteLength > maxBytes) {
+      await reader.cancel();
+      return { error: "Request is too large.", status: 413 };
+    }
+
+    chunks.push(Buffer.from(value));
+  }
+
+  return { body: Buffer.concat(chunks) };
+}
+
 export function isSameOriginRequest(request) {
   const origin = request.headers.get("origin");
   if (!origin) return true;

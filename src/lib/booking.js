@@ -143,14 +143,14 @@ export async function getBusinessSettings(client) {
 export async function lockAvailabilityDay(tx, date, settings) {
   const id = randomUUID();
   await tx.$executeRaw`
-    INSERT INTO \`DailyAvailability\`
-      (\`id\`, \`date\`, \`maxMeetings\`, \`isAvailable\`, \`opensAt\`, \`closesAt\`, \`createdAt\`, \`updatedAt\`)
+    INSERT INTO "DailyAvailability"
+      ("id", "date", "maxMeetings", "isAvailable", "opensAt", "closesAt", "createdAt", "updatedAt")
     VALUES
-      (${id}, ${date}, ${settings.defaultMaxMeetings}, true, ${settings.defaultOpenTime}, ${settings.defaultCloseTime}, NOW(3), NOW(3))
-    ON DUPLICATE KEY UPDATE \`id\` = \`id\`
+      (${id}, ${date}, ${settings.defaultMaxMeetings}, true, ${settings.defaultOpenTime}, ${settings.defaultCloseTime}, CURRENT_TIMESTAMP(3), CURRENT_TIMESTAMP(3))
+    ON CONFLICT ("date") DO NOTHING
   `;
   await tx.$queryRaw`
-    SELECT \`id\` FROM \`DailyAvailability\` WHERE \`date\` = ${date} FOR UPDATE
+    SELECT "id" FROM "DailyAvailability" WHERE "date" = ${date} FOR UPDATE
   `;
   return tx.dailyAvailability.findUnique({ where: { date } });
 }
